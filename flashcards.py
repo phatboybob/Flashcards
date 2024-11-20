@@ -10,11 +10,14 @@ from utils import (
                     check_word,
                     remove_word,
                     clear_values,
+                    run_english_to_german,
                   )
 
 DIRECTION_ENGLISH = 'English'
 DIRECTION_GERMAN = 'German'
 OTHER_DIRECTION = ''
+if "disabled" not in st.session_state:
+    st.session_state.disabled = True
 
 st.set_page_config(page_title="Flashcards")
 
@@ -49,50 +52,83 @@ with review_tab:
                                                             'this percentage'
                                                             '  \nExample: 10, 70% --> all words that have only been asked'
                                                             '10 or fewer times and were correct 70% of the time'))
-        direction = parameters_container.selectbox('Translate Diretion',
-                                                    [DIRECTION_GERMAN,
-                                                    DIRECTION_ENGLISH])
-        other_direction = set_other_direction(direction=direction)
+        # direction = parameters_container.selectbox('Translate Diretion',
+        #                                             [DIRECTION_GERMAN,
+        #                                             DIRECTION_ENGLISH])
+        # other_direction = set_other_direction(direction=direction)
 
-        show_selection = st.form_submit_button('Show selection')
+        show_selection = st.form_submit_button('Set Parameters')
     if show_selection:
         params = set_params(number_to_ask=number_to_ask,
                    correct_count=correct_count,
                    percent_correct=percent_correct,
-                   direction=direction,
-                   other_direction=other_direction)
-        st.session_state.sample = sample = get_vocab_sample(number_to_ask=number_to_ask,
-                            percent_correct=percent_correct,
-                            correct_count=correct_count,
-                            direction=direction)
+                   )
 
 
-    with st.form('question section', clear_on_submit=True):
-        st.session_state.my_answer = st.text_input(label="Type Answer Here:")
 
-        submit = st.form_submit_button('Run')
+    german_to_english_tab, english_to_german_tab = st.tabs(['Translate English to German',
+                                                            'Translate German to English'])
+    with english_to_german_tab:
 
-    if submit:
-        if 'word' not in st.session_state:
-            # get the row from the sample
-            # set the "word" and the "answer"
-            set_word_line_values(direction=direction, other_direction=other_direction)
-            st.markdown(f'# {st.session_state.word}')
-        else:
-            if check_word() is True:
-                remove_word(direction=direction)
+        with st.form('English to German'):
+            submit_english = st.form_submit_button('Run English to German')
+
+            yes_col, no_col = st.columns(2)
+            with yes_col:
+                st.session_state.yes_button = st.form_submit_button(label='Yes', disabled=st.session_state.disabled)
+            with no_col:
+                st.session_state.no_button = st.form_submit_button(label='No', disabled=st.session_state.disabled)
+
+
+            if submit_english:
+                if 'sample' not in st.session_state:
+                    st.session_state.sample = get_vocab_sample(number_to_ask=number_to_ask,
+                    percent_correct=percent_correct,
+                    correct_count=correct_count,
+                    direction = DIRECTION_GERMAN
+                    )
+                run_english_to_german()
+            if st.session_state.no_button:
+                st.session_state_correct = False
+                del st.session_state['word']
+                run_english_to_german()
+            if st.session_state.yes_button:
                 if len(st.session_state.sample) > 0:
-                    set_word_line_values(direction=direction, other_direction=other_direction)
+                    remove_word(direction=DIRECTION_ENGLISH)
+                    del st.session_state['word']
+                run_english_to_german()
+
+    with german_to_english_tab:
+        with st.form('German to English', clear_on_submit=True):
+            st.session_state.my_answer = st.text_input(label="Type Answer Here:")
+            submit = st.form_submit_button('Run German to English')
+            if submit:
+                if 'sample' not in st.session_state:
+                    st.session_state.sample = get_vocab_sample(number_to_ask=number_to_ask,
+                    percent_correct=percent_correct,
+                    correct_count=correct_count,
+                    direction = DIRECTION_GERMAN
+                    )
+                if 'word' not in st.session_state:
+                    # get the row from the sample
+                    # set the "word" and the "answer"
+                    set_word_line_values(direction=DIRECTION_GERMAN, other_direction=set_other_direction(DIRECTION_GERMAN))
                     st.markdown(f'# {st.session_state.word}')
                 else:
-                    st.markdown('# You got them all correct. Hit "Show Selection" to get a new selection of words')
-                    clear_values()
-            else:
-                st.markdown('# Incorrect. The correct '
-                         f' answer for :blue[{st.session_state.word}] is '
-                         f':green[{st.session_state.correct_answer}] '
-                         f'your answer: :red[{st.session_state.my_answer}]')
-                del st.session_state['word']
+                    if check_word(DIRECTION_GERMAN) is True:
+                        remove_word(direction=DIRECTION_GERMAN)
+                        if len(st.session_state.sample) > 0:
+                            set_word_line_values(direction=DIRECTION_GERMAN, other_direction=DIRECTION_GERMAN)
+                            st.markdown(f'# {st.session_state.word}')
+                        else:
+                            st.markdown('# You got them all correct. Hit "Show Selection" to get a new selection of words')
+                            clear_values()
+                    else:
+                        st.markdown('# Incorrect. The correct '
+                                    f' answer for :blue[{st.session_state.word}] is '
+                                    f':green[{st.session_state.correct_answer}] '
+                                    f'your answer: :red[{st.session_state.my_answer}]')
+                        del st.session_state['word']
 
 with view_tab:
     view_flashcard_data(st.session_state.flashcards_df)
