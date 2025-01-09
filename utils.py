@@ -3,17 +3,19 @@ import os
 import pandas
 import streamlit as st
 
-LORIS_FLASHCARDS_CSV = 'Flashcards_lori.csv'
-COLUMNS_AND_TYPES = {'English Word': str,
-                    'English Correct Count': 'Int64',
-                    'English Call Count': 'Int64',
-                    'English Percent Correct': float,
-                    'German Word': str,
-                    'German Correct Count': 'Int64',
-                    'German Call Count': 'Int64',
-                    'German Percent Correct': float}
+# LORIS_FLASHCARDS_CSV = 'Flashcards_lori.csv'
+LORIS_FLASHCARDS_CSV = 'sample.csv'
 DIRECTION_ENGLISH = 'English'
 DIRECTION_GERMAN = 'German'
+COLUMNS_AND_TYPES = {f'{DIRECTION_ENGLISH} Word': str,
+                     f'{DIRECTION_ENGLISH} Correct Count': 'Int64',
+                     f'{DIRECTION_ENGLISH} Call Count': 'Int64',
+                     f'{DIRECTION_ENGLISH} Percent Correct': float,
+                     f'{DIRECTION_GERMAN} Word': str,
+                    f'{DIRECTION_GERMAN} Correct Count': 'Int64',
+                    f'{DIRECTION_GERMAN} Call Count': 'Int64',
+                    f'{DIRECTION_GERMAN} Percent Correct': float}
+
 
 
 def load_flashcard_data(flashcard_path=LORIS_FLASHCARDS_CSV):
@@ -30,14 +32,25 @@ def load_flashcard_data(flashcard_path=LORIS_FLASHCARDS_CSV):
         ).fillna(0)
         return flashcards_df
 
-def view_flashcard_data(flashcards_df):
+def view_flashcard_data_editor(flashcards_df):
     """_summary_
     """
     if not flashcards_df.empty:
         st.data_editor(
             flashcards_df,
-            use_container_width=True,
-            num_rows='dynamic'
+            use_container_width=False,
+            num_rows='dynamic',
+        )
+    else:
+        st.write("please upload data")
+
+
+def view_flashcard_table(flashcards_df):
+    """_summary_
+    """
+    if not flashcards_df.empty:
+        st.table(
+            flashcards_df,
         )
     else:
         st.write("please upload data")
@@ -53,10 +66,17 @@ def get_vocab_sample(number_to_ask,
         percent_corret (float): _description_
         correct_count (int): _description_
     """
+    # entire dataframe
     all_words = st.session_state.flashcards_df
+
+    # all words that fit the ask count and percent cuttoff
     fewer_words = all_words[(all_words[f'{direction} Correct Count'] <= int(correct_count)) & (all_words[f'{direction} Percent Correct'] <= float(percent_correct))]
-    sample = fewer_words.sample(n=int(number_to_ask))
-    return sample
+
+    # subset of qualifying words
+    if len(fewer_words) <= int(number_to_ask):
+        return fewer_words
+    else:
+        return fewer_words.sample(n=int(number_to_ask))
 
 def check_word(direction):
     """Check if the value entered was correct
@@ -88,6 +108,7 @@ def set_params(number_to_ask,
         direction (_type_): _description_
         other_direction (_type_): _description_
     """
+    clear_values()
     return {'number_to_ask': number_to_ask,
             'correct_count': correct_count,
             'percent_correct': percent_correct,
@@ -105,6 +126,45 @@ def set_word_line_values(direction, other_direction):
     st.session_state.word = st.session_state.word_line[f'{direction} Word'].values[0]
     st.session_state.correct_answer = st.session_state.word_line[f'{other_direction} Word'].values[0]
 
+def update_correct_word(direction, from_word, df):
+    """updates when a word is correct"""
+    correct_count = df.loc[df[f'{direction} Word'] == from_word, f'{direction} Correct Count']
+    call_count = df.loc[df[f'{direction} Word'] == from_word, f'{direction} Call Count']
+    print(f'{from_word}: Before correct count: {correct_count.to_string(index=False)}, call count: {call_count.to_string(index=False)}')
+
+    correct_count += 1
+    call_count += 1
+    correct_percent = correct_count/call_count
+
+    df.loc[df[f'{direction} Word'] == from_word, f'{direction} Call Count'] = call_count
+    df.loc[df[f'{direction} Word'] == from_word, f'{direction} Correct Count'] = correct_count
+    df.loc[df[f'{direction} Word'] == from_word, f'{direction} Percent Correct'] = correct_percent
+    print(f'{from_word} After: correct count: {correct_count.to_string(index=False)}, call count: {call_count.to_string(index=False)}, correct_percent: {correct_percent.to_string(index=False)}')
+
+
+def update_incorrect_word(direction, from_word, df):
+    """updates when a word is incorrect"""
+    correct_count = df.loc[df[f'{direction} Word'] == from_word, f'{direction} Correct Count']
+    call_count = df.loc[df[f'{direction} Word'] == from_word, f'{direction} Call Count']
+    print(f'{from_word}: Before correct count: {correct_count.to_string(index=False)}, call count: {call_count.to_string(index=False)}')
+
+    call_count += 1
+    correct_percent = correct_count/call_count
+
+    df.loc[df[f'{direction} Word'] == from_word, f'{direction} Call Count'] = call_count
+    df.loc[df[f'{direction} Word'] == from_word, f'{direction} Percent Correct'] = correct_percent
+    print(f'{from_word} After: correct count: {correct_count.to_string(index=False)}, call count: {call_count.to_string(index=False)}, correct_percent: {correct_percent.to_string(index=False)}')
+
+
+def merge_and_print_dataframes(old_df, new_df):
+    """Merges the new and old dataframe, overwriting the old with the new
+
+    Args:
+        new_df (_type_): _description_
+        old_df (_type_): _description_
+    """
+    old_df.update(new_df)
+    old_df.to_csv(LORIS_FLASHCARDS_CSV, index=False, header=False)
 
 def remove_word(direction):
     """remove words from the sample
@@ -133,9 +193,14 @@ def run_english_to_german():
             set_word_line_values(direction='English', other_direction='German')
             disable_yes_no()
             st.markdown(f'# {st.session_state.word}')
+            st.markdown(f'the sample data is: {st.session_state.sample}')
+
         else:
             st.markdown('# You got them all correct. Hit '
-                        '"Show Selection" to get a new selection of words')
+                        '"Show Selection" to get a new selection of words'
+                        f'the sample data is: {st.session_state.sample}')
+            print(f'the selection is {st.session_state.sample}')
+
             clear_values()
     else:
         st.markdown('# The correct '

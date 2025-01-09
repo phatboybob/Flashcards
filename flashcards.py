@@ -1,8 +1,10 @@
 import streamlit as st
+import pandas
 
 from utils import (
                     load_flashcard_data,
-                    view_flashcard_data,
+                    view_flashcard_data_editor,
+                    view_flashcard_table,
                     get_vocab_sample,
                     set_other_direction,
                     set_params,
@@ -11,15 +13,21 @@ from utils import (
                     remove_word,
                     clear_values,
                     run_english_to_german,
+                    update_correct_word,
+                    update_incorrect_word,
+                    merge_and_print_dataframes,
                   )
 
 DIRECTION_ENGLISH = 'English'
 DIRECTION_GERMAN = 'German'
 OTHER_DIRECTION = ''
+
 if "disabled" not in st.session_state:
     st.session_state.disabled = True
 
-st.set_page_config(page_title="Flashcards")
+st.set_page_config(page_title="Flashcards",
+                   layout="wide",
+                   )
 
 
 
@@ -35,7 +43,7 @@ with review_tab:
     with st.form('vocab_list_form'):
         parameters_container = st.container()
         number_to_ask = parameters_container.text_input(label="Number of words to ask",
-                                                        value=20,
+                                                        value=5,
                                                         help=('This is the number of words '
                                                             'that will be asked in this session'))
         correct_count = parameters_container.text_input(label='Only show if correct less than:',
@@ -60,14 +68,14 @@ with review_tab:
         show_selection = st.form_submit_button('Set Parameters')
     if show_selection:
         params = set_params(number_to_ask=number_to_ask,
-                   correct_count=correct_count,
-                   percent_correct=percent_correct,
-                   )
+                            correct_count=correct_count,
+                            percent_correct=percent_correct,
+                            )
 
 
 
-    german_to_english_tab, english_to_german_tab = st.tabs(['Translate English to German',
-                                                            'Translate German to English'])
+    german_to_english_tab, english_to_german_tab = st.tabs(['Translate German to English',
+                                                            'Translate English to German'])
     with english_to_german_tab:
 
         with st.form('English to German'):
@@ -105,30 +113,42 @@ with review_tab:
             if submit:
                 if 'sample' not in st.session_state:
                     st.session_state.sample = get_vocab_sample(number_to_ask=number_to_ask,
-                    percent_correct=percent_correct,
-                    correct_count=correct_count,
-                    direction = DIRECTION_GERMAN
-                    )
+                                                               percent_correct=percent_correct,
+                                                               correct_count=correct_count,
+                                                               direction = DIRECTION_GERMAN
+                                                              )
+                    st.session_state.sample_copy = st.session_state.sample
                 if 'word' not in st.session_state:
-                    # get the row from the sample
-                    # set the "word" and the "answer"
-                    set_word_line_values(direction=DIRECTION_GERMAN, other_direction=set_other_direction(DIRECTION_GERMAN))
-                    st.markdown(f'# {st.session_state.word}')
+                    if len(st.session_state.sample)>0:
+                        # get the row from the sample
+                        # set the "word" and the "answer"
+                        set_word_line_values(direction=DIRECTION_GERMAN, other_direction=set_other_direction(DIRECTION_GERMAN))
+                        st.markdown(f'# {st.session_state.word}')
+                    else:
+                        st.markdown('Parameters are too strict, no words in sample size')
                 else:
                     if check_word(DIRECTION_GERMAN) is True:
+                        update_correct_word(direction=DIRECTION_GERMAN, from_word=st.session_state.word, df=st.session_state.sample_copy)
                         remove_word(direction=DIRECTION_GERMAN)
                         if len(st.session_state.sample) > 0:
-                            set_word_line_values(direction=DIRECTION_GERMAN, other_direction=DIRECTION_GERMAN)
+                            set_word_line_values(direction=DIRECTION_GERMAN, other_direction=set_other_direction(DIRECTION_GERMAN))
                             st.markdown(f'# {st.session_state.word}')
                         else:
                             st.markdown('# You got them all correct. Hit "Show Selection" to get a new selection of words')
+                            merge_and_print_dataframes(st.session_state.flashcards_df, st.session_state.sample_copy)
+                            st.markdown(f'# Summary: \n {view_flashcard_table(st.session_state.sample_copy)}')
+
                             clear_values()
                     else:
                         st.markdown('# Incorrect. The correct '
                                     f' answer for :blue[{st.session_state.word}] is '
                                     f':green[{st.session_state.correct_answer}] '
                                     f'your answer: :red[{st.session_state.my_answer}]')
+                        update_incorrect_word(direction=DIRECTION_GERMAN,
+                                              from_word=st.session_state.word,
+                                              df=st.session_state.sample_copy)
                         del st.session_state['word']
 
+
 with view_tab:
-    view_flashcard_data(st.session_state.flashcards_df)
+    view_flashcard_data_editor(st.session_state.flashcards_df)
