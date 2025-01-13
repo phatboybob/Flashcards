@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas
 
 from utils import (
                     load_flashcard_data,
@@ -12,18 +11,17 @@ from utils import (
                     check_word,
                     remove_word,
                     clear_values,
-                    run_english_to_german,
                     update_correct_word,
                     update_incorrect_word,
                     merge_and_print_dataframes,
+                    enable_buttons,
+                    disable_buttons,
                   )
 
 DIRECTION_ENGLISH = 'English'
 DIRECTION_GERMAN = 'German'
 OTHER_DIRECTION = ''
 
-if "disabled" not in st.session_state:
-    st.session_state.disabled = True
 
 st.set_page_config(page_title="Flashcards",
                    layout="wide",
@@ -73,39 +71,8 @@ with review_tab:
                             )
 
 
-
     german_to_english_tab, english_to_german_tab = st.tabs(['Translate German to English',
                                                             'Translate English to German'])
-    with english_to_german_tab:
-
-        with st.form('English to German'):
-            submit_english = st.form_submit_button('Run English to German')
-
-            yes_col, no_col = st.columns(2)
-            with yes_col:
-                st.session_state.yes_button = st.form_submit_button(label='Yes', disabled=st.session_state.disabled)
-            with no_col:
-                st.session_state.no_button = st.form_submit_button(label='No', disabled=st.session_state.disabled)
-
-
-            if submit_english:
-                if 'sample' not in st.session_state:
-                    st.session_state.sample = get_vocab_sample(number_to_ask=number_to_ask,
-                    percent_correct=percent_correct,
-                    correct_count=correct_count,
-                    direction = DIRECTION_GERMAN
-                    )
-                run_english_to_german()
-            if st.session_state.no_button:
-                st.session_state_correct = False
-                del st.session_state['word']
-                run_english_to_german()
-            if st.session_state.yes_button:
-                if len(st.session_state.sample) > 0:
-                    remove_word(direction=DIRECTION_ENGLISH)
-                    del st.session_state['word']
-                run_english_to_german()
-
     with german_to_english_tab:
         with st.form('German to English', clear_on_submit=True):
             st.session_state.my_answer = st.text_input(label="Type Answer Here:")
@@ -148,6 +115,65 @@ with review_tab:
                                               from_word=st.session_state.word,
                                               df=st.session_state.sample_copy)
                         del st.session_state['word']
+
+
+    with english_to_german_tab:
+        with st.form('English to German'):
+            submit_english_to_german = st.form_submit_button('Run English to German/Show Answer')
+            if 'yes_no_disabled' not in st.session_state:
+                st.session_state.yes_no_disabled = True
+            yes_col, no_col = st.columns(2)
+            with yes_col:
+                st.session_state.yes_button = st.form_submit_button(label='Yes', disabled=st.session_state.yes_no_disabled)
+            with no_col:
+                # For some reason on_click can only be in one (and only the second) one of these buttons. Otherwise "no" won't work
+                st.session_state.no_button = st.form_submit_button(label='No', disabled=st.session_state.yes_no_disabled, on_click=disable_buttons())
+
+            if submit_english_to_german:
+                if 'sample' not in st.session_state:
+                    st.session_state.sample = get_vocab_sample(number_to_ask=number_to_ask,
+                                                               percent_correct=percent_correct,
+                                                               correct_count=correct_count,
+                                                               direction = DIRECTION_ENGLISH
+                                                              )
+                    st.session_state.sample_copy = st.session_state.sample
+                    enable_buttons()
+                if 'word' in st.session_state:
+                    st.markdown(f'# :blue[{st.session_state.word}] is '
+                                f':green[{st.session_state.correct_answer}] in Geramn'
+                                '\n Did you get it right?')
+                else:
+                    if len(st.session_state.sample)>0:
+                        # get the row from the sample
+                        # set the "word" and the "answer"
+                        set_word_line_values(direction=DIRECTION_ENGLISH, other_direction=set_other_direction(DIRECTION_ENGLISH))
+                        st.markdown(f'# {st.session_state.word}')
+                    else:
+                        st.markdown('Parameters are too strict, no words in sample size')
+            if st.session_state.yes_button:
+                # This executes for the next button pressed,
+                # which should only ever be "Run English to German/Show Answer"
+                enable_buttons()
+                update_correct_word(direction=DIRECTION_ENGLISH, from_word=st.session_state.word, df=st.session_state.sample_copy)
+                remove_word(direction=DIRECTION_ENGLISH)
+                if len(st.session_state.sample) > 0:
+                    set_word_line_values(direction=DIRECTION_ENGLISH, other_direction=set_other_direction(DIRECTION_ENGLISH))
+                    st.markdown(f'# {st.session_state.word}')
+                else:
+                    st.markdown('# You got them all correct. Hit "Show Selection" to get a new selection of words')
+                    merge_and_print_dataframes(st.session_state.flashcards_df, st.session_state.sample_copy)
+                    st.markdown(f'# Summary: \n {view_flashcard_table(st.session_state.sample_copy)}')
+                    del st.session_state.yes_no_disabled
+                    clear_values()
+            if st.session_state.no_button:
+                # This executes for the next button pressed,
+                # which should only ever be "Run English to German/Show Answer"
+                enable_buttons()
+                update_incorrect_word(direction=DIRECTION_ENGLISH,
+                                        from_word=st.session_state.word,
+                                        df=st.session_state.sample_copy)
+                set_word_line_values(direction=DIRECTION_ENGLISH, other_direction=set_other_direction(DIRECTION_ENGLISH))
+                st.markdown(f'# {st.session_state.word}')
 
 
 with view_tab:
