@@ -130,7 +130,6 @@ def update_correct_word(direction, from_word, df):
     """updates when a word is correct"""
     correct_count = df.loc[df[f'{direction} Word'] == from_word, f'{direction} Correct Count']
     call_count = df.loc[df[f'{direction} Word'] == from_word, f'{direction} Call Count']
-    print(f'{from_word}: Before correct count: {correct_count.to_string(index=False)}, call count: {call_count.to_string(index=False)}')
 
     correct_count += 1
     call_count += 1
@@ -139,7 +138,6 @@ def update_correct_word(direction, from_word, df):
     df.loc[df[f'{direction} Word'] == from_word, f'{direction} Call Count'] = call_count
     df.loc[df[f'{direction} Word'] == from_word, f'{direction} Correct Count'] = correct_count
     df.loc[df[f'{direction} Word'] == from_word, f'{direction} Percent Correct'] = correct_percent
-    print(f'{from_word} After: correct count: {correct_count.to_string(index=False)}, call count: {call_count.to_string(index=False)}, correct_percent: {correct_percent.to_string(index=False)}')
 
 
 def update_incorrect_word(direction, from_word, df):
@@ -191,7 +189,6 @@ def run_english_to_german():
             # set the "word" and the "answer"
         if len(st.session_state.sample) > 0:
             set_word_line_values(direction='English', other_direction='German')
-            disable_yes_no()
             st.markdown(f'# {st.session_state.word}')
             st.markdown(f'the sample data is: {st.session_state.sample}')
 
@@ -207,8 +204,6 @@ def run_english_to_german():
                     f' answer for :blue[{st.session_state.word}] is '
                     f':green[{st.session_state.correct_answer}] '
                     'Did you get it right?')
-        enable_yes_no()
-        # del st.session_state['word']
 
 def enable_yes_no():
     """enable the button. This is backwards and I don't know why
@@ -221,4 +216,14 @@ def disable_yes_no():
     """
     if "disabled" in st.session_state and st.session_state.disabled == True:
         st.session_state.disabled = False
+
+
+def enable_buttons():
+    """Enables the yes_no buttons"""
+    print('method call set it to enabled')
+    st.session_state.yes_no_disabled = False
+
+def disable_buttons():
+    """Disabled the yes_no buttons"""
+    st.session_state.yes_no_disabled = True
 
