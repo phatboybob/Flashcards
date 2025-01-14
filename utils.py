@@ -8,8 +8,8 @@ import os
 import pandas
 import streamlit as st
 
-# LORIS_FLASHCARDS_CSV = 'Flashcards_lori.csv'
-LORIS_FLASHCARDS_CSV = 'sample.csv'
+LORIS_FLASHCARDS_CSV = 'Flashcards_lori.csv'
+# LORIS_FLASHCARDS_CSV = 'sample.csv'
 DIRECTION_ENGLISH = 'English'
 DIRECTION_GERMAN = 'German'
 COLUMNS_AND_TYPES = {f'{DIRECTION_ENGLISH} Word': str,
@@ -21,6 +21,11 @@ COLUMNS_AND_TYPES = {f'{DIRECTION_ENGLISH} Word': str,
                      f'{DIRECTION_GERMAN} Call Count': 'Int64',
                      f'{DIRECTION_GERMAN} Percent Correct': float}
 
+COLUM_CONFIG = {f'{DIRECTION_ENGLISH} Percent Correct': st.column_config.NumberColumn(
+                    format='%.2f %%'),
+                f'{DIRECTION_GERMAN} Percent Correct': st.column_config.NumberColumn(
+                    format='%.2f %%')
+               }
 
 def load_flashcard_data(flashcard_path=LORIS_FLASHCARDS_CSV):
     """Read in the default csv. Unless it's not there.
@@ -45,6 +50,7 @@ def view_flashcard_data_editor(flashcards_df):
             flashcards_df,
             use_container_width=False,
             num_rows='dynamic',
+            column_config=COLUM_CONFIG
         )
     else:
         st.write("please upload data")
@@ -136,7 +142,7 @@ def set_word_line_values(direction, other_direction):
     """Once a subset of words are selected based on the parameters,
     This selects a word from the sample/subset and assigns the entire
     row of data from the dataframe Example:
-    he must	11	37	0.2972972972972973	er muss	4	6	0.6666666666666666
+    he must	11	37	69.69	er muss	4	6	66.66
     Args:
         direction (string): English -> German or German -> English
         other_direction (string): opposite of above
@@ -168,7 +174,7 @@ def update_correct_word(direction, from_word, df):
 
     correct_count += 1
     call_count += 1
-    correct_percent = correct_count/call_count
+    correct_percent = correct_count/call_count * 100
 
     # update sample dataframe with new counts and percent correct
     df.loc[df[f'{direction} Word'] == from_word, f'{direction} Call Count'] = call_count
@@ -192,7 +198,7 @@ def update_incorrect_word(direction, from_word, df):
     call_count = df.loc[df[f'{direction} Word'] == from_word, f'{direction} Call Count']
 
     call_count += 1
-    correct_percent = correct_count/call_count
+    correct_percent = correct_count/call_count * 100
 
     # update sample dataframe with new counts and percent correct
     df.loc[df[f'{direction} Word'] == from_word, f'{direction} Call Count'] = call_count
@@ -252,7 +258,6 @@ def disable_yes_no():
 def enable_buttons():
     """Enable any buttons with the session state of 'disabled' (yes and no)
     """
-    print('method call set it to enabled')
     st.session_state.yes_no_disabled = False
 
 def disable_buttons():

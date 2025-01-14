@@ -47,7 +47,7 @@ with review_tab:
     with st.form('vocab_list_form'):
         parameters_container = st.container()
         number_to_ask = parameters_container.text_input(label='Number of words to ask',
-                                                        value=5,
+                                                        value=20,
                                                         help=('This is the number of words '
                                                               'that will be asked in this session'))
         correct_count = parameters_container.text_input(label='Only show if correct less than:',
