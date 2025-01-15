@@ -99,7 +99,7 @@ def check_word(direction):
         direction: asking a German word to English, or the inverse.
     """
     if direction == 'German':
-        if st.session_state.my_answer.lower() == st.session_state.correct_answer.lower():
+        if st.session_state.my_answer.lower().strip() == st.session_state.correct_answer.lower():
             return True
         else:
             return False
