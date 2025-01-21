@@ -23,6 +23,7 @@ from utils import (
                     merge_and_print_dataframes,
                     disable_buttons,
                     switch_buttons,
+                    write_df_to_csv,
                   )
 
 DIRECTION_ENGLISH = 'English'
@@ -34,13 +35,13 @@ st.set_page_config(page_title='Flashcards',
                    layout='wide',
                    )
 
-
-st.session_state.flashcards_df = load_flashcard_data()
-
 if 'flashcards_df' not in st.session_state:
-    flashcards_data = st.file_uploader('Choose your flashcards csv')
-    if flashcards_data is not None:
-        load_flashcard_data(flashcards_data)
+    st.session_state.flashcards_df = load_flashcard_data()
+
+# if 'flashcards_df' not in st.session_state:
+#     flashcards_data = st.file_uploader('Choose your flashcards csv')
+#     if flashcards_data is not None:
+#         load_flashcard_data(flashcards_data)
 
 review_tab, view_tab = st.tabs(['Review', 'Modify/View'])
 with review_tab:
@@ -123,8 +124,8 @@ with review_tab:
 
                             # merge the updated correct counts with
                             # original data and print to file
-                            merge_and_print_dataframes(st.session_state.flashcards_df,
-                                                       st.session_state.sample_copy)
+                            merge_and_print_dataframes(old_df=st.session_state.flashcards_df,
+                                                       new_df=st.session_state.sample_copy)
                             st.markdown('# Summary: \n '
                                         f'{view_flashcard_table(
                                             st.session_state.sample_copy)}')
@@ -211,11 +212,15 @@ with review_tab:
                 else:
                     st.markdown('# You got them all correct. '
                                 'Hit "Show Selection" to get a new selection of words')
-                    merge_and_print_dataframes(st.session_state.flashcards_df,
-                                               st.session_state.sample_copy)
+
+                    # merge the updated correct counts with
+                    # original data and print to file
+                    merge_and_print_dataframes(old_df=st.session_state.flashcards_df,
+                                               new_df=st.session_state.sample_copy)
                     st.markdown('# Summary: \n '
-                                f'{view_flashcard_table(st.session_state.sample_copy)}')
-                    del st.session_state.yes_no_disabled
+                                f'{view_flashcard_table(
+                                    st.session_state.sample_copy)}')
+
                     clear_values()
             if st.session_state.no_button:
                 # This executes for the next button pressed,
@@ -230,4 +235,10 @@ with review_tab:
 
 
 with view_tab:
-    view_flashcard_data_editor(st.session_state.flashcards_df)
+    with st.form(key='save to file'):
+        save_to_csv = st.form_submit_button(label='Save')
+        if save_to_csv:
+            write_df_to_csv(dataframe=st.session_state.flashcards_df,
+                            )
+    view_flashcard_data_editor(flashcards_df=st.session_state.flashcards_df,
+                               )
