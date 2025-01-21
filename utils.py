@@ -21,10 +21,18 @@ COLUMNS_AND_TYPES = {f'{DIRECTION_ENGLISH} Word': str,
                      f'{DIRECTION_GERMAN} Call Count': 'Int64',
                      f'{DIRECTION_GERMAN} Percent Correct': float}
 
-COLUM_CONFIG = {f'{DIRECTION_ENGLISH} Percent Correct': st.column_config.NumberColumn(
-                    format='%.2f %%'),
+COLUM_CONFIG = {f'{DIRECTION_ENGLISH} Word': st.column_config.TextColumn(required=True),
+                f'{DIRECTION_ENGLISH} Correct Count': st.column_config.NumberColumn(default=0),
+                f'{DIRECTION_ENGLISH} Call Count': st.column_config.NumberColumn(default=0),
+                f'{DIRECTION_ENGLISH} Percent Correct': st.column_config.NumberColumn(
+                    format='%.2f %%',
+                    default=0.0),
+                f'{DIRECTION_GERMAN} Word': st.column_config.TextColumn(required=True),
+                f'{DIRECTION_GERMAN} Correct Count': st.column_config.NumberColumn(default=0),
+                f'{DIRECTION_GERMAN} Call Count': st.column_config.NumberColumn(default=0),
                 f'{DIRECTION_GERMAN} Percent Correct': st.column_config.NumberColumn(
-                    format='%.2f %%')
+                    format='%.2f %%',
+                    default=0.0)
                }
 
 def load_flashcard_data(flashcard_path=LORIS_FLASHCARDS_CSV):
@@ -43,21 +51,21 @@ def load_flashcard_data(flashcard_path=LORIS_FLASHCARDS_CSV):
 
 
 def view_flashcard_data_editor(flashcards_df):
-    """_summary_
+    """displays everything in the review panel
     """
     if not flashcards_df.empty:
-        st.data_editor(
-            flashcards_df,
-            use_container_width=False,
-            num_rows='dynamic',
-            column_config=COLUM_CONFIG
-        )
+        st.session_state.flashcards_df = st.data_editor(
+                                                        data=flashcards_df,
+                                                        use_container_width=False,
+                                                        num_rows='dynamic',
+                                                        column_config=COLUM_CONFIG,
+                                                        )
     else:
         st.write("please upload data")
 
 
 def view_flashcard_table(flashcards_df):
-    """_summary_
+    """prints out the summary table after getting all words correct
     """
     if not flashcards_df.empty:
         st.table(
@@ -218,7 +226,22 @@ def merge_and_print_dataframes(old_df, new_df):
     old_df.update(new_df)
 
     # write that shit out
-    old_df.to_csv(LORIS_FLASHCARDS_CSV, index=False, header=False)
+    write_df_to_csv(filename=LORIS_FLASHCARDS_CSV,
+                    dataframe=old_df)
+
+
+def write_df_to_csv(dataframe,
+                    filename=LORIS_FLASHCARDS_CSV,
+                    ):
+    """writes a dataframe to csv
+
+    Args:
+        dataframe (dataframe): dataframe you want to write to csv
+        filename (output filename, optional): output filename csv to write dataframe to.
+        Defaults to LORIS_FLASHCARDS_CSV.
+    """
+    dataframe.to_csv(filename, index=False, header=False)
+
 
 def remove_word(direction):
     """remove words from the sample. Once all the words are gone,
