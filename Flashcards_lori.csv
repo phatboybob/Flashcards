@@ -28,16 +28,16 @@ later,12,12,100.0,später,11,11,100.0
 loud,12,12,100.0,laut,10,10,100.0
 the carpet,7,7,100.0,der teppich,12,13,92.31
 bright,10,11,90.91,hell,9,12,75.0
-is raining,8,10,80.0,regnet,10,10,100.0
+is raining,9,11,81.81818181818183,regnet,10,10,100.0
 the bedroom,12,13,92.31,das schlafzimmer,11,11,100.0
 dark,8,9,88.89,dunkel,12,12,100.0
 to study,21,29,72.41,studieren,11,12,91.67
 the theater,12,14,85.71,das kino,11,12,91.67
 fast,12,15,80.0,schnell,10,10,100.0
 Ugly,8,9,88.89,hässlich,10,10,100.0
-now,10,11,90.91,jetzt,8,8,100.0
+now,11,12,91.66666666666666,jetzt,8,8,100.0
 how,12,14,85.71,wie,12,12,100.0
-really,11,13,84.62,wirklich,8,8,100.0
+really,11,13,84.62,wirklich,9,9,100.0
 the bed,11,12,91.67,das bett,10,10,100.0
 friends,11,12,91.67,freunde,12,19,63.16
 cheap,9,9,100.0,billig,11,11,100.0
@@ -49,7 +49,7 @@ the table,11,12,91.67,der tisch,8,8,100.0
 expensive,7,7,100.0,teuer,8,10,80.0
 comfortable,7,7,100.0,bequem,13,16,81.25
 the bookcase,24,36,66.67,das Bücherregal,12,16,75.0
-fully furnished,7,7,100.0,voll möbliert,11,13,84.62
+fully furnished,8,8,100.0,voll möbliert,11,13,84.62
 you like,10,12,83.33,du magst,9,12,75.0
 to sleep,16,23,69.57,schlafen,13,16,81.25
 the couch,10,10,100.0,die couch,11,11,100.0
@@ -62,34 +62,34 @@ why,10,10,100.0,warum,12,14,85.71
 city,10,10,100.0,stadt,13,13,100.0
 far away,10,10,100.0,weit weg,12,13,92.31
 you Need,11,14,78.57,du brauchst,14,18,77.78
-The apartment,7,7,100.0,die wohnung,10,11,90.91
-right,9,9,100.0,rechts,10,12,83.33
+The apartment,7,7,100.0,die wohnung,11,12,91.66666666666666
+right,10,10,100.0,rechts,10,12,83.33
 when,8,10,80.0,wann,12,13,92.31
 clean,12,13,92.31,sauber,11,12,91.67
 who,9,9,100.0,wer,10,10,100.0
 he sees,10,12,83.33,er sieht,12,13,92.31
-vacation,10,12,83.33,urlaub,10,12,83.33
+vacation,11,13,84.61538461538461,urlaub,10,12,83.33
 i like,12,15,80.0,ich mag,13,18,72.22
 roommate,9,9,100.0,mitbewohner,11,11,100.0
 today,11,11,100.0,heute,13,13,100.0
 windy,9,10,90.0,windig,9,9,100.0
 smart,10,10,100.0,klug,11,11,100.0
 the umbrella,26,42,61.9,Der Regenschirm,13,13,100.0
-fall,8,8,100.0,herbst,7,7,100.0
-bad,10,10,100.0,schlecht,11,12,91.67
-cloudy,10,10,100.0,bewölkt,10,13,76.92
+fall,9,10,90.0,herbst,7,7,100.0
+bad,11,11,100.0,schlecht,11,12,91.67
+cloudy,10,10,100.0,bewölkt,11,14,78.57142857142857
 beautiful,9,9,100.0,schön,8,8,100.0
 scarf,9,9,100.0,Schal,12,13,92.31
 is snowing,8,8,100.0,schneit,13,17,76.47
 what is your name,15,21,71.43,Wie heißen Sie,10,12,83.33
 doctor,9,9,100.0,Artz,10,11,90.91
-the water bottle,8,10,80.0,die wasserflasche,21,31,67.74
+the water bottle,9,12,75.0,die wasserflasche,21,31,67.74
 foggy,10,13,76.92,neblig,10,13,76.92
 to hike,9,9,100.0,wandern,11,12,91.67
-hot,8,9,88.89,heiß,10,11,90.91
-spring,10,10,100.0,Frühling,10,10,100.0
+hot,9,10,90.0,heiß,10,11,90.91
+spring,10,10,100.0,Frühling,11,11,100.0
 sister,9,9,100.0,schwester,10,10,100.0
-my husband,8,8,100.0,mein mann,13,13,100.0
+my husband,9,9,100.0,mein mann,13,13,100.0
 my wife,11,11,100.0,meine Frau,11,11,100.0
 delicious,11,11,100.0,lecker,10,14,71.43
 see you soon,11,11,100.0,bis bald,10,13,76.92
@@ -97,23 +97,23 @@ how are you,10,11,90.91,wie geht's,20,33,60.61
 no problem,7,9,77.78,kein problem,11,11,100.0
 see you later,9,10,90.0,bis spater,14,17,82.35
 I'm sorry,10,10,100.0,Es tut mir leid,11,12,91.67
-always,9,9,100.0,immer,11,11,100.0
+always,10,10,100.0,immer,11,11,100.0
 the food,12,12,100.0,das essen,13,13,100.0
 also,11,13,84.62,auch,14,19,73.68
 daughter,9,9,100.0,tochter,12,12,100.0
 grandmother,9,9,100.0,oma,9,9,100.0
 aunt,8,8,100.0,tante,11,11,100.0
 girlfriend,11,12,91.67,freundin,12,14,85.71
-nice,9,9,100.0,nett,11,11,100.0
+nice,10,10,100.0,nett,11,11,100.0
 where,12,14,85.71,wo,9,11,81.82
 the snail,12,13,92.31,die Schnecke,10,10,100.0
 the owl,9,10,90.0,die Eule,10,11,90.91
 actor,11,12,91.67,Schauspieler,11,12,91.67
-egg,7,8,87.5,ei,7,7,100.0
+egg,8,10,80.0,ei,7,7,100.0
 exciting,12,15,80.0,aufregend,13,17,76.47
-stressful,10,10,100.0,stressig,13,14,92.86
+stressful,11,12,91.66666666666666,stressig,13,14,92.86
 college student,11,15,73.33,studentin,11,17,64.71
-profession,9,11,81.82,Beruf,18,25,72.0
+profession,10,12,83.33333333333334,Beruf,18,25,72.0
 you paint,13,15,86.67,malst,10,10,100.0
 to paint,8,10,80.0,malen,16,23,69.57
 department store,19,25,76.0,kaufhaus,12,12,100.0
@@ -122,7 +122,7 @@ no idea,10,13,76.92,keine ahnung,12,13,92.31
 student (male),18,32,56.25,Schüler,15,23,65.22
 our,12,16,75.0,unserer,10,13,76.92
 school,18,24,75.0,schule,14,19,73.68
-languages,7,8,87.5,Sprachen,13,20,65.0
+languages,8,9,88.88888888888889,Sprachen,13,20,65.0
 he speaks,15,19,78.95,er spricht,11,11,100.0
 shoes,10,10,100.0,Schuhe,16,24,66.67
 question,13,14,92.86,frage,10,12,83.33
@@ -137,7 +137,7 @@ come on,12,13,92.31,los,18,26,69.23
 again,10,10,100.0,wieder,12,13,92.31
 The vegetarian,18,24,75.0,Der Vegetarier,14,18,77.78
 The menu,11,14,78.57,die Speisekarte,13,17,76.47
-The chicken,13,17,76.47,Das Hähnchen,10,10,100.0
+The chicken,13,17,76.47,Das Hähnchen,11,11,100.0
 boy,10,11,90.91,junge,11,12,91.67
 The Bear,11,14,78.57,der bär,10,11,90.91
 he plays,11,13,84.62,er spielt,14,17,82.35
@@ -154,7 +154,7 @@ sunday,12,16,75.0,sonntag,11,13,84.62
 i look forward to it,10,10,100.0,Ich freue mich,14,22,63.64
 too bad,18,29,62.07,Schade,14,17,82.35
 The Admission ticket,12,16,75.0,Die Eintrittskarte,10,13,76.92
-eight,10,10,100.0,acht,10,11,90.91
+eight,10,10,100.0,acht,11,12,91.66666666666666
 seven,11,11,100.0,sieben,10,10,100.0
 her cat,11,14,78.57,ihre katze,10,11,90.91
 easy,12,13,92.31,einfach,10,11,90.91
@@ -165,7 +165,7 @@ he searches,10,12,83.33,er sucht,13,17,76.47
 the shirt,11,11,100.0,das Hemd,10,10,100.0
 to search,14,19,73.68,suchen,14,19,73.68
 clothes,9,10,90.0,kleidung,13,14,92.86
-dress,11,12,91.67,kleid,10,12,83.33
+dress,11,12,91.67,kleid,11,14,78.57142857142857
 the suit jacket,12,14,85.71,das sakko,10,12,83.33
 tuesday,12,13,92.31,dienstag,11,11,100.0
 that's good,11,13,84.62,das geht,12,18,66.67
@@ -192,7 +192,7 @@ sweet,13,15,86.67,süß,12,12,100.0
 to pay,14,18,77.78,zahlen,12,15,80.0
 together,13,13,100.0,zusammen,10,10,100.0
 separately,13,15,86.67,getrennt,12,14,85.71
-cash,9,11,81.82,bar,11,13,84.62
+cash,11,13,84.61538461538461,bar,11,13,84.62
 The Church,11,12,91.67,Die Kirche,11,11,100.0
 where from,10,11,90.91,woher,15,25,60.0
 piano,11,12,91.67,Klavier,11,15,73.33
@@ -228,7 +228,7 @@ then,13,13,100.0,dann,14,15,93.33
 third,13,14,92.86,dritten,12,15,80.0
 may,11,12,91.67,mai,13,13,100.0
 fourth,12,12,100.0,vierten,11,14,78.57
-second,10,11,90.91,zweiten,13,14,92.86
+second,11,13,84.61538461538461,zweiten,13,14,92.86
 july,12,12,100.0,juli,11,11,100.0
 the bus stop,14,21,66.67,Die Bushaltestelle,12,14,85.71
 wait,11,11,100.0,warten sie,11,14,78.57
@@ -357,19 +357,19 @@ in the,17,20,85.0,im,17,21,80.95
 currently,17,17,100.0,zurzeit,14,16,87.5
 stairs,20,20,100.0,Treppe,15,20,75.0
 dangerous,20,31,64.52,gefährlich,14,21,66.67
-if,8,10,80.0,wenn,10,16,62.5
+if,9,12,75.0,wenn,10,16,62.5
 to be crazy,7,8,87.5,spinnen,12,19,63.16
 to draw,7,7,100.0,zeichnen,9,12,75.0
 finally,7,8,87.5,endlich,10,12,83.33
 stuff,7,7,100.0,sachen,22,36,61.11
 pretty,7,8,87.5,hübsch,7,9,77.78
-better,7,7,100.0,besser,7,7,100.0
+better,7,7,100.0,besser,8,8,100.0
 quiet,8,9,88.89,ruhig,7,10,70.0
-flour,8,10,80.0,mehl,9,11,81.82
+flour,9,11,81.81818181818183,mehl,9,11,81.82
 the neighbor (female),7,8,87.5,die Nachbarin,7,7,100.0
-the neighbor (male),7,7,100.0,der Nachbar,12,19,63.16
+the neighbor (male),8,8,100.0,der Nachbar,12,19,63.16
 silent,11,17,64.71,leise,16,28,57.14
-the cup,7,8,87.5,die tasse,9,11,81.82
+the cup,7,8,87.5,die tasse,10,12,83.33333333333334
 The office,7,8,87.5,das Büro,8,9,88.89
 the boss,7,7,100.0,der chef,8,10,80.0
 ham,8,10,80.0,Schinken,13,21,61.9
@@ -381,7 +381,7 @@ the pillow,7,7,100.0,das Kopfkissen,9,10,90.0
 to grow,9,13,69.23,wachsen,7,9,77.78
 to cancel,11,18,61.11,stornieren,9,12,75.0
 to hope,8,8,100.0,hoffen,10,10,100.0
-her dog,10,14,71.43,ihr hund,8,9,88.88888888888889
+her dog,11,15,73.33333333333333,ihr hund,8,9,88.88888888888889
 his cat,7,7,100.0,seine katze,9,10,90.0
 his dog,8,9,88.89,sein hund,8,10,80.0
 your dog,7,8,87.5,dein hund,8,12,66.67
@@ -393,16 +393,16 @@ should,8,9,88.89,shollen,10,15,66.67
 at your place,8,11,72.73,bei dir,14,25,56.0
 annoying,9,12,75.0,ärgerlich,8,12,66.66666666666666
 courage,8,9,88.89,Mut,19,37,51.35
-to feel,7,9,77.78,fühlen,10,16,62.5
+to feel,8,10,80.0,fühlen,10,16,62.5
 goes away,7,7,100.0,geht weg,13,19,68.42
 the dough,12,17,70.59,der teig,7,8,87.5
 not yet,9,10,90.0,noch nicht,8,10,80.0
 Important,13,22,59.09,Wichtig,10,13,76.92
-to be late,10,15,66.67,zu spät kommen,12,17,70.59
+to be late,11,16,68.75,zu spät kommen,12,17,70.59
 The Exam,12,20,60.0,Die Prüfung,8,12,66.67
 enough,12,17,70.59,genug,8,10,80.0
 soon,8,9,88.89,bald,8,8,100.0
-to pass,9,13,69.23,bestehen,9,13,69.23
+to pass,9,13,69.23,bestehen,10,15,66.66666666666666
 what are you doing now,7,10,70.0,Was machst du gerade,8,9,88.89
 are you alright,13,23,56.52,geht es dir gut,11,18,61.11
 immediately,7,10,70.0,sofort,13,22,59.09
@@ -421,15 +421,15 @@ quite,12,19,63.16,ziemlich,22,41,53.66
 The Promotion,16,26,61.54,Die Beförderung,9,14,64.29
 awful,7,9,77.78,furchtbar,7,9,77.78
 the joke,7,8,87.5,der witz,8,8,100.0
-looks nice,10,15,66.67,sieht nett aus,7,9,77.78
+looks nice,11,17,64.70588235294117,sieht nett aus,7,9,77.78
 certain,7,9,77.78,sicher,11,16,68.75
 the glasses,7,9,77.78,die brille,7,7,100.0
-the song,12,17,70.59,das leid,8,8,100.0
+the song,12,17,70.59,das leid,9,9,100.0
 to remind,8,11,72.73,erinnern,12,22,54.55
 it is,17,29,58.62,ich bin es,9,14,64.28571428571429
-next time,8,8,100.0,nächstes Mal,8,8,100.0
+next time,8,8,100.0,nächstes Mal,9,9,100.0
 last,11,15,73.33,letzte,8,8,100.0
-name is,7,8,87.5,heiße,15,26,57.69
+name is,8,9,88.88888888888889,heiße,15,26,57.69
 the armchair,8,11,72.73,der Sessel,9,13,69.23
 broken,7,7,100.0,kaputt,7,7,100.0
 the shower,8,8,100.0,die Dusche,8,8,100.0
@@ -439,26 +439,26 @@ siblings,7,10,70.0,Geschwister,9,13,69.23
 the turtle,7,8,87.5,die Schildkröte,8,8,100.0
 well-behaved,8,9,88.89,brav,7,9,77.78
 granddaughter,7,7,100.0,Enkelin,7,11,63.64
-grandson,8,10,80.0,Enkel,9,12,75.0
+grandson,9,11,81.81818181818183,Enkel,9,12,75.0
 unemployed,7,7,100.0,arbeitslos,8,9,88.89
 the village,7,7,100.0,das dorf,8,12,66.67
 the mustard,10,14,71.43,der senf,8,9,88.89
 spicy,7,8,87.5,scharf,9,11,81.81818181818183
-to get,8,9,88.89,bekommen,8,9,88.89
-spinach,7,8,87.5,spinat,8,8,100.0
+to get,9,10,90.0,bekommen,8,9,88.89
+spinach,7,8,87.5,spinat,9,9,100.0
 cookies,8,8,100.0,kekse,9,12,75.0
 the holiday,7,8,87.5,der Feiertag,10,14,71.43
 the stores,15,23,65.22,die Geschäfte,12,19,63.16
-closed,13,24,54.17,geschlossen,7,11,63.64
+closed,13,24,54.17,geschlossen,8,12,66.66666666666666
 the relatives,14,21,66.67,die Verwandten,8,12,66.67
 to work,7,7,100.0,arbeiten,9,9,100.0
 the hour,14,18,77.78,die stunde,7,7,100.0
 closes,10,15,66.67,schließt,8,13,61.54
-the id card,13,20,65.0,der ausweis,7,8,87.5
+the id card,13,20,65.0,der ausweis,8,10,80.0
 the drinks,8,10,80.0,die Getränke,9,10,90.0
 the suitcase,7,9,77.78,der Koffer,9,9,100.0
 the pen,7,8,87.5,der kugelschreiber,8,9,88.89
-to sign,7,7,100.0,unterschreiben,7,9,77.78
+to sign,8,8,100.0,unterschreiben,7,9,77.78
 the form,10,14,71.43,das formular,7,7,100.0
 the dictionary,13,21,61.9,das Wörterbuch,8,8,100.0
 is delayed,11,17,64.71,Verspätung,19,36,52.78
@@ -470,28 +470,28 @@ The Driver's License,7,9,77.78,Der Führerschein,11,18,61.11
 to motivate,7,7,100.0,motivieren,15,22,68.18
 the break,7,8,87.5,die pause,7,7,100.0
 to smoke,7,9,77.78,rauchen,8,11,72.73
-the end of the workday,10,13,76.92,der Feierabend,14,26,53.85
+the end of the workday,11,14,78.57142857142857,der Feierabend,14,26,53.85
 the bicycle,7,8,87.5,das fahrrad,11,18,61.11
 wet,9,12,75.0,nass,7,9,77.78
 The gym shoe,8,8,100.0,die Turnschuhe,15,25,60.0
-than,7,7,100.0,als,7,8,87.5
+than,8,9,88.88888888888889,als,7,8,87.5
 midnight,7,9,77.78,Mitternacht,7,7,100.0
 the month,12,18,66.67,der Monat,8,8,100.0
 the day,7,7,100.0,der Tag,7,7,100.0
 the year,7,8,87.5,das Jahr,7,7,100.0
 the weekend,7,9,77.78,das Wochenende,8,8,100.0
-the week,7,9,77.78,die Woche,7,8,87.5
+the week,8,10,80.0,die Woche,7,8,87.5
 the cucumber,9,10,90.0,die gurke,8,9,88.89
 the health food store,16,27,59.26,der bioladen,7,7,100.0
 shortly,7,8,87.5,gleich,12,20,60.0
 the butcher shop,7,9,77.78,die Metzgerei,10,15,66.67
-the pastry shop,7,8,87.5,die konditorei,7,8,87.5
+the pastry shop,7,8,87.5,die konditorei,8,10,80.0
 the receipt,12,22,54.55,der Kassenzettel,7,7,100.0
 have a nice day,11,18,61.11,einen schönen Tag noch,8,8,100.0
-the bag,7,7,100.0,die Tüte,7,9,77.78
+the bag,8,8,100.0,die Tüte,7,9,77.78
 I do not care,14,22,63.64,das ist mir egal,12,19,63.16
-empty,7,8,87.5,leer,9,13,69.23
-someone,13,20,65.0,jemand,7,8,87.5
+empty,8,9,88.88888888888889,leer,9,13,69.23
+someone,13,20,65.0,jemand,8,9,88.88888888888889
 Happy Birthday,9,12,75.0,Alles Gute zum Geburtstag,8,8,100.0
 the horse,7,7,100.0,das Pferd,7,7,100.0
 very likely,7,10,70.0,ganz bestimmt,13,24,54.17
@@ -508,7 +508,7 @@ helpful,7,8,87.5,hilfreich,8,8,100.0
 the chores,14,23,60.87,die Hausarbeit,8,10,80.0
 tidy,7,9,77.78,ordentlich,8,10,80.0
 to fly,7,8,87.5,fliegen,7,7,100.0
-sleep in,7,9,77.78,ausschlafen,9,16,56.25
+sleep in,8,11,72.72727272727273,ausschlafen,9,16,56.25
 niece,7,7,100.0,nichte,7,9,77.78
 the luggage,12,20,60.0,das Gepäck,8,11,72.73
 the departure,7,8,87.5,der abflug,9,15,60.0
@@ -517,14 +517,14 @@ exercise,7,9,77.78,Übung,14,25,56.0
 Charger,13,22,59.09,Ladegerät,7,9,77.78
 Outlet,15,25,60.0,Steckdosen,12,17,70.59
 The anniversary,8,10,80.0,Der Jahrestag,11,16,68.75
-to call,8,8,100.0,anrufen,8,9,88.89
+to call,8,8,100.0,anrufen,9,10,90.0
 to send,7,8,87.5,schicken,11,18,61.11
 the necklace,7,7,100.0,die kette,8,11,72.73
 The earrings,7,9,77.78,die Ohrringe,11,15,73.33
-champagne,7,7,100.0,sekt,7,9,77.78
+champagne,7,7,100.0,sekt,8,13,61.53846153846154
 guest,9,14,64.29,gast,7,7,100.0
 all the time,7,9,77.78,die ganze zeit,8,12,66.66666666666666
-a few,8,8,100.0,ein paar,8,8,100.0
+a few,9,9,100.0,ein paar,8,8,100.0
 wedding,7,8,87.5,hochzeit,9,12,75.0
 the account,14,21,66.67,das konto,8,9,88.89
 to open,7,10,70.0,offnen,9,13,69.23076923076923
@@ -532,9 +532,9 @@ a necklace,8,8,100.0,eine kette,8,11,72.73
 birthplace,9,10,90.0,geburtsort,9,11,81.82
 The embassy,18,35,51.43,die botschaft,7,8,87.5
 The pineapple,7,8,87.5,Die ananas,7,7,100.0
-healthier,7,7,100.0,gesünder,7,9,77.78
+healthier,8,8,100.0,gesünder,7,9,77.78
 to agree,11,18,61.11,zustimmen,10,16,62.5
-The Activities,8,8,100.0,die Aktivitäten ,8,11,72.73
+The Activities,8,8,100.0,die Aktivitäten ,9,12,75.0
 easier,7,7,100.0,einfacher,8,8,100.0
 both,7,8,87.5,beide,7,8,87.5
 to renew,23,46,50.0,verlängern,19,39,48.72
@@ -544,15 +544,15 @@ a cold,7,7,100.0,eine  Erkältung,8,9,88.89
 an excuse,7,9,77.78,eine Ausrede,8,9,88.88888888888889
 over,8,8,100.0,vorbei,13,23,56.52
 let me know,13,22,59.09,Sag Bescheid,11,16,68.75
-to move,15,27,55.56,umziehen,9,12,75.0
+to move,15,27,55.56,umziehen,10,13,76.92307692307693
 to go out,7,7,100.0,ausgehen,7,9,77.78
 the move,12,20,60.0,der Umzug,7,11,63.64
 exhausting,7,9,77.78,anstrengend,11,19,57.89
 glad,8,9,88.89,froh,12,20,60.0
-peace,7,7,100.0,ruhe,8,10,80.0
+peace,7,7,100.0,ruhe,9,13,69.23076923076923
 the gift certificate,17,33,51.52,der Gutschein,11,18,61.11
 to gift,8,11,72.73,schenken,17,29,58.62
-lovely,9,15,60.0,herrlich,10,15,66.67
+lovely,10,16,62.5,herrlich,10,15,66.67
 to try,8,10,80.0,probieren,7,9,77.78
 whose,13,18,72.22,wessen,7,11,63.64
 The Grapes,9,10,90.0,Die Trauben,9,11,81.82
@@ -561,7 +561,7 @@ The Asparagus,8,10,80.0,Der Spargel,10,13,76.92307692307693
 The baked goods,11,18,61.11,die Backwaren,8,9,88.89
 beforehand,10,13,76.92,vorher,11,17,64.71
 new year's eve,7,7,100.0,silvester,9,10,90.0
-Christmas,8,8,100.0,Weihnachten,7,7,100.0
+Christmas,8,8,100.0,Weihnachten,8,8,100.0
 even,9,12,75.0,sogar,11,18,61.11
 the fruit cake,11,15,73.33,der stollen,7,10,70.0
 The Dentist,7,8,87.5,Der Zahnartz,7,7,100.0
@@ -579,16 +579,16 @@ the corner,9,10,90.0,die ecke,7,9,77.78
 the soap,7,9,77.78,die Seife,8,10,80.0
 the basement,8,10,80.0,der keller,7,7,100.0
 comfortable,9,15,60.0,gemütlich,10,18,55.56
-other,8,8,100.0,andere,9,15,60.0
+other,8,8,100.0,andere,10,17,58.82352941176471
 the pencil,12,22,54.55,der Bleistift,8,10,80.0
-the floor,7,8,87.5,Der Boden,9,12,75.0
+the floor,8,9,88.88888888888889,Der Boden,9,12,75.0
 the magazines,7,9,77.78,die Zeitschriften,8,13,61.54
 to lay,8,10,80.0,legen,7,8,87.5
 mean,8,8,100.0,gemein,7,9,77.78
 look out,8,10,80.0,pass auf,8,13,61.54
 careful,7,9,77.78,vorsichtig,8,11,72.73
 the scooter,7,9,77.78,der Motorroller,9,14,64.29
-the stop sign,7,9,77.78,das Stoppschild,9,9,100.0
+the stop sign,7,9,77.78,das Stoppschild,10,10,100.0
 the beard,10,15,66.67,der bart,8,9,88.89
 to come in,8,12,66.67,reinkommen,14,23,60.87
 scared,7,8,87.5,angst,8,13,61.54
@@ -605,11 +605,11 @@ the beer mug,9,9,100.0,der bierkrug,8,8,100.0
 the apron,7,8,87.5,die Schürze,8,12,66.67
 the festival,10,10,100.0,das fest,8,9,88.89
 to try on,8,8,100.0,anprobieren,8,10,80.0
-the dressing rooms,7,7,100.0,Die Umkleidekabinen,7,10,70.0
+the dressing rooms,8,8,100.0,Die Umkleidekabinen,7,10,70.0
 the pants,8,10,80.0,die hose,7,7,100.0
 to fit,14,20,70.0,passen,9,12,75.0
 too tight,7,8,87.5,zu eng,7,10,70.0
-it does not matter,7,9,77.78,egal,7,8,87.5
+it does not matter,7,9,77.78,egal,8,9,88.88888888888889
 The mushroom,7,8,87.5,Der Pilz,7,10,70.0
 fabulous,8,9,88.89,großartig,11,19,57.89
 the tallest,7,7,100.0,am höchsten,9,13,69.23
@@ -617,27 +617,27 @@ the nature,7,7,100.0,die natur,7,7,100.0
 the plane,16,32,50.0,das flugzeug,11,18,61.11
 nobody,8,8,100.0,niemand,7,9,77.78
 to demonstrate,15,28,53.57,zeigen,11,23,47.83
-the alarm,7,9,77.78,der wecker,8,12,66.67
-to get up,11,16,68.75,aufstehen,7,9,77.78
+the alarm,8,11,72.72727272727273,der wecker,8,12,66.67
+to get up,11,16,68.75,aufstehen,8,10,80.0
 the news,12,20,60.0,die Nachrichten,9,14,64.29
 brush my teeth,8,10,80.0,putze mir die Zähne,7,8,87.5
 the company,7,8,87.5,die ferma,7,8,87.5
 the cafeteria,10,14,71.43,der kantine,8,8,100.0
-around,10,14,71.43,gegen,11,19,57.89
+around,11,16,68.75,gegen,11,19,57.89
 to turn off,7,7,100.0,ausmachen,14,24,58.33
 to fall asleep,7,8,87.5,einschlafen,8,13,61.54
 the farm,8,11,72.73,der Bauernhof,8,9,88.89
 downstairs,7,9,77.78,unten,9,14,64.28571428571429
 the lion,8,12,66.67,der Löwe,9,9,100.0
-the rabbit,7,8,87.5,das Kaninchen,7,8,87.5
+the rabbit,9,11,81.81818181818183,das Kaninchen,7,8,87.5
 to laugh,8,9,88.89,Lachen,8,8,100.0
 about,7,7,100.0,über,8,10,80.0
 to tell,11,18,61.11,erzählen,8,13,61.54
 daily,7,7,100.0,täglich,9,10,90.0
-the sweets,11,15,73.33,die Süßigkeiten,7,7,100.0
+the sweets,11,15,73.33,die Süßigkeiten,8,8,100.0
 sailing,8,10,80.0,segeln,11,18,61.11
 the tent,8,11,72.73,das zelt,8,9,88.89
-isn't it,10,12,83.33,nicht war,7,8,87.5
+isn't it,11,13,84.61538461538461,nicht war,7,8,87.5
 in a hurry,8,8,100.0,in Eile,8,10,80.0
 waiting room,8,9,88.89,wartezimmer,7,7,100.0
 what about,7,9,77.78,Worüber,8,13,61.54
@@ -649,16 +649,16 @@ snored,9,12,75.0,hat geschnarcht,7,8,87.5
 washed the dishes,7,7,100.0,abgewaschen,13,24,54.17
 strange,7,8,87.5,komisch,7,7,100.0
 to snore,8,10,80.0,schnarchen,8,9,88.89
-really,8,9,88.89,echt,8,8,100.0
+really,8,9,88.89,echt,9,9,100.0
 mad,10,15,66.67,sauer,10,16,62.5
-to lose (at something),9,10,90.0,verloren,9,14,64.29
+to lose (at something),10,13,76.92307692307693,verloren,9,14,64.29
 last,7,10,70.0,zuletzt,7,8,87.5
 upstairs,7,9,77.78,oben,9,12,75.0
 the nap,10,11,90.91,das Nickerchen,9,11,81.81818181818183
 under,9,9,100.0,unter,8,11,72.73
 to give up,7,9,77.78,aufgeben,7,11,63.64
 days,8,9,88.89,tagen,8,8,100.0
-to get,8,8,100.0,bekommen,8,12,66.67
+to get,9,9,100.0,bekommen,8,12,66.67
 the birth year,7,7,100.0,das Geburtsjahr,7,8,87.5
 to arrive,7,7,100.0,ankommen,7,10,70.0
 the second,8,8,100.0,die sekunde,10,14,71.42857142857143
@@ -666,17 +666,17 @@ the headphones,8,9,88.89,die Kopfhörer ,8,10,80.0
 behind,8,8,100.0,hinter,8,10,80.0
 the drawer,9,11,81.82,der Schublade,8,11,72.73
 the wallet,8,9,88.89,Der Geldbeutel,7,8,87.5
-everywhere,7,7,100.0,überall,8,13,61.54
+everywhere,8,8,100.0,überall,8,13,61.54
 well-known,11,11,100.0,bekannt,8,11,72.73
-computer science,7,8,87.5,informatik,7,9,77.78
-clear,8,8,100.0,klar,8,8,100.0
-to answer,8,10,80.0,anworten,8,10,80.0
+computer science,7,8,87.5,informatik,8,10,80.0
+clear,9,9,100.0,klar,8,8,100.0
+to answer,9,11,81.81818181818183,anworten,8,10,80.0
 to listen,7,8,87.5,zuhören,7,9,77.78
 the lecture,15,27,55.56,der Vorlesung,14,24,58.33
 the bathtub,8,9,88.89,die Badewanne,8,11,72.73
 the day after tomorrow,7,8,87.5,übermorgen,8,12,66.67
-the cash,12,20,60.0,das bargeld,8,8,100.0
-the seats,7,7,100.0,die Sitzplätze,15,26,57.69
+the cash,12,20,60.0,das bargeld,9,9,100.0
+the seats,8,8,100.0,die Sitzplätze,15,26,57.69
 to pay for,7,8,87.5,bezahlen,12,23,52.17
 famous,9,11,81.82,berühmt,12,18,66.67
 guy,7,7,100.0,typ,7,7,100.0
@@ -685,7 +685,7 @@ the day before yesterday,10,10,100.0,vorgestern,9,12,75.0
 the apprenticeship,14,19,73.68,die Ausbildung,7,10,70.0
 major,12,14,85.71,hauptfach,7,7,100.0
 to lose (something),10,15,66.67,verlieren,10,16,62.5
-to ride,16,26,61.54,Reiten,8,12,66.67
+to ride,16,26,61.54,Reiten,9,14,64.28571428571429
 to practice,11,13,84.62,trainieren,8,8,100.0
 to do math,7,7,100.0,rechnen,7,9,77.78
 to spell,10,13,76.92,buchstabieren,8,12,66.67
@@ -697,20 +697,20 @@ the playground,10,14,71.43,Der Spielplatz,7,7,100.0
 to take place,10,14,71.43,statt finden,12,20,60.0
 to become,14,20,70.0,werden,8,11,72.73
 writer,14,23,60.87,Schriftsteller,9,13,69.23
-to build,7,7,100.0,bauen,9,14,64.29
+to build,7,7,100.0,bauen,10,17,58.82352941176471
 awful,7,9,77.78,schrecklich,7,10,70.0
-one day,8,8,100.0,eines tages,8,11,72.73
+one day,9,9,100.0,eines tages,8,11,72.73
 the landscape,13,19,68.42,Die Landschaft,8,12,66.67
 the prize,10,13,76.92,Der Preis,7,8,87.5
-what kind of,8,9,88.89,Was für,8,12,66.67
+what kind of,9,11,81.81818181818183,Was für,8,12,66.67
 the people,7,7,100.0,der Menschen,9,12,75.0
 the environment,8,11,72.73,die Umwelt,9,12,75.0
-to earn,7,7,100.0,verdienen,11,15,73.33
+to earn,8,8,100.0,verdienen,11,15,73.33
 the tie,10,11,90.91,die Krawatte,7,7,100.0
 the briefcase,8,9,88.89,die Aktentasche,7,9,77.78
 horrible,12,20,60.0,scheußlich,9,13,69.23
-the notebook,9,12,75.0,das Notizbuch,8,8,100.0
-the mug,7,7,100.0,der becher,7,9,77.78
+the notebook,10,14,71.42857142857143,das Notizbuch,8,8,100.0
+the mug,8,9,88.88888888888889,der becher,7,9,77.78
 huge,7,9,77.78,riesigen,8,10,80.0
 the belt,8,10,80.0,der Gürtel,7,7,100.0
 You did not know that,12,20,60.0,Hast du das nicht gewusst?,7,11,63.64
@@ -719,7 +719,7 @@ rained,7,7,100.0,geregnet,7,7,100.0
 the thunderstorm,7,8,87.5,das Gewitter,7,8,87.5
 piece of advice,9,11,81.82,Ratschlag,8,13,61.54
 pale,7,7,100.0,blass,9,15,60.0
-feel bad for,8,8,100.0,habe Mitleid mit,15,30,50.0
+feel bad for,9,11,81.81818181818183,habe Mitleid mit,15,30,50.0
 benefits,17,33,51.52,vorteile,8,12,66.67
 walk,7,8,87.5,spaziergang,7,9,77.78
 stiff,11,18,61.11,steif,7,8,87.5
@@ -733,7 +733,7 @@ when I was a kid,10,13,76.92,als ich ein kind war,7,7,100.0
 cartoons,12,19,63.16,Zeichentrickfilme ,8,8,100.0
 not at all,11,19,57.89,gar nicht,7,8,87.5
 liked,13,20,65.0,gemocht,9,14,64.29
-members,7,9,77.78,Mitglieder,12,20,60.0
+members,8,11,72.72727272727273,Mitglieder,12,20,60.0
 easy,15,27,55.56,leicht,7,9,77.78
 geography,13,20,65.0,Erdkunde,7,9,77.78
 hated,7,8,87.5,gehasst,11,16,68.75
@@ -744,14 +744,14 @@ countries,7,9,77.78,Länder,7,8,87.5
 the monitor,13,19,68.42,der Bildschirm,7,7,100.0
 regularly,8,9,88.89,regelmäßig,7,8,87.5
 inside,7,7,100.0,drinnen,7,7,100.0
-to tidy up,8,11,72.73,aufräumen,15,29,51.72
+to tidy up,9,12,75.0,aufräumen,15,29,51.72
 agreed,14,25,56.0,einverstanden,19,38,50.0
 the furniture,10,15,66.67,die Möbel,8,10,80.0
 unusual,12,20,60.0,ungewöhnlich,7,9,77.78
-the stove,7,8,87.5,der herd,9,11,81.82
+the stove,7,8,87.5,der herd,10,12,83.33333333333334
 across from,10,14,71.43,gegenüber,8,10,80.0
-square meters,7,9,77.78,Quadratmeter ,8,11,72.73
-especially,8,11,72.73,besonders,14,25,56.0
+square meters,8,10,80.0,Quadratmeter ,8,11,72.73
+especially,9,12,75.0,besonders,14,25,56.0
 to go outside,7,10,70.0,hinausgehen,7,9,77.78
 to chat,8,10,80.0,plaudern,8,10,80.0
 nevertheless,8,11,72.73,trotzdem,11,18,61.11
@@ -767,16 +767,16 @@ to lend,8,9,88.89,leihen,7,10,70.0
 the letter,8,13,61.54,der breif,7,7,100.0
 the stamp,16,25,64.0,die briefmarke,7,7,100.0
 the envelope,7,8,87.5,der briefumschlag,7,9,77.78
-the package,8,9,88.89,das Paket ,9,16,56.25
+the package,9,10,90.0,das Paket ,11,18,61.11111111111112
 out of town,7,8,87.5,verreist,7,10,70.0
-to accept,7,8,87.5,annehmen,9,15,60.0
+to accept,8,11,72.72727272727273,annehmen,9,15,60.0
 out of town for business,7,8,87.5,geschäftlich verreist,9,14,64.29
 the oil,7,8,87.5,das Öl,9,9,100.0
 to fry,7,7,100.0,braten,8,9,88.89
-the cans,8,9,88.89,die Dosen,9,14,64.29
+the cans,9,10,90.0,die Dosen,9,14,64.29
 secretary,7,8,87.5,Sekretär,7,10,70.0
 to copy,11,17,64.71,kopieren,8,8,100.0
-handyman,7,8,87.5,Handwerker,9,11,81.81818181818183
+handyman,8,9,88.88888888888889,Handwerker,9,11,81.81818181818183
 to repair,7,7,100.0,reparieren,8,10,80.0
 to grade,7,7,100.0,korrigieren,7,10,70.0
 to close,7,8,87.5,zumachen,12,20,60.0
@@ -785,14 +785,14 @@ to spend (time),19,38,50.0,verbringen,12,24,50.0
 went out,7,9,77.78,sind...ausgegangen,8,10,80.0
 rarely,12,20,60.0,selten,7,10,70.0
 the bean,8,9,88.89,die Bohne,8,11,72.73
-the salmon,7,8,87.5,der Lachs,9,13,69.23
+the salmon,8,10,80.0,der Lachs,9,13,69.23
 free of charge,8,8,100.0,kostenlos,9,13,69.23
 anything else for you,7,9,77.78,Sonst noch etwas für Sie,8,12,66.67
-the zipcode,7,8,87.5,Die Postleitzahl,10,16,62.5
+the zipcode,8,10,80.0,Die Postleitzahl,10,16,62.5
 a quarter of an hour,7,7,100.0,eine Viertelstunde,8,12,66.67
 the juice,8,10,80.0,der saft,7,7,100.0
 change ($),7,9,77.78,kleingeld,12,22,54.55
-the delivery person,7,10,70.0,Der Lieferant ,8,12,66.67
+the delivery person,8,16,50.0,Der Lieferant ,8,12,66.67
 the tip,7,9,77.78,das Trinkgeld,8,10,80.0
 but rather,8,8,100.0,sondern,15,26,57.69
 the garlic,7,9,77.78,der Knoblauch ,7,9,77.78
@@ -800,14 +800,14 @@ vinegar,7,9,77.78,essig,9,9,100.0
 outstanding,8,11,72.73,hervorragend ,8,12,66.67
 opened,9,14,64.29,aufgemacht,14,24,58.33
 got up,7,8,87.5,aufgestanden,15,27,55.56
-to offer,9,14,64.29,anbieten,12,20,60.0
+to offer,10,16,62.5,anbieten,12,20,60.0
 to lie,7,8,87.5,lügen,8,11,72.73
 degree,7,9,77.78,Abschluss,11,22,50.0
 the ghost,8,10,80.0,das Gespenst,7,10,70.0
 the monster,11,18,61.11,das Ungeheuer,8,9,88.89
 the monkey,7,8,87.5,der affe,8,8,100.0
 curious,13,21,61.9,neugierig,8,11,72.73
-to shout,7,10,70.0,schreien,11,18,61.11
+to shout,8,11,72.72727272727273,schreien,11,18,61.11
 to wake up,8,10,80.0,wecken,12,20,60.0
 to meet,7,9,77.78,kennenlernen,7,7,100.0
 met,7,8,87.5,kennengelernt,7,8,87.5
@@ -815,7 +815,7 @@ the sunglasses,7,7,100.0,die Sonnenbrille,8,8,100.0
 offers,10,14,71.43,bietet an,20,37,54.05
 the sky,7,7,100.0,der himmel,7,7,100.0
 how do you feel,10,15,66.67,Wie fühlst du dich,8,9,88.89
-passed,13,20,65.0,bestanden,10,16,62.5
+passed,13,20,65.0,bestanden,11,18,61.11111111111112
 to pass,7,9,77.78,bestehen,10,20,50.0
 depressed,10,14,71.43,deprimiert,8,9,88.89
 to fight,12,20,60.0,streiten,7,10,70.0
@@ -842,14 +842,14 @@ brought along,7,9,77.78,mitgebracht,7,8,87.5
 the electric kettle,10,16,62.5,der Wasserkocher,8,11,72.72727272727273
 the bedsheets,13,21,61.9,die Bettlaken,12,23,52.17
 to fill out,7,8,87.5,ausfüllen,8,10,80.0
-filled out,8,9,88.89,ausgefüllt,8,10,80.0
+filled out,9,11,81.81818181818183,ausgefüllt,8,10,80.0
 whose,7,9,77.78,wessen,8,10,80.0
 the city map,7,10,70.0,Der stadtplan,7,7,100.0
 the bridge,7,8,87.5,die Brücke,7,8,87.5
 of the,7,8,87.5,vom,7,9,77.78
 to cross,10,16,62.5,überqueren,9,14,64.29
 gas,8,9,88.89,Benzin,7,8,87.5
-the tank,8,10,80.0,der tank,7,8,87.5
+the tank,9,11,81.81818181818183,der tank,7,8,87.5
 the capital,12,19,63.16,die Hauptstadt,7,7,100.0
 the hill,8,10,80.0,der Hügel,9,12,75.0
 the crossing,11,16,68.75,Die Kreuzung,10,18,55.56
@@ -866,7 +866,7 @@ Miles,7,8,87.5,Meilen,7,8,87.5
 to knit,11,18,61.11,stricken,9,11,81.82
 somewhere,7,9,77.78,irgendwo,7,10,70.0
 snowed,7,8,87.5,geschneit,8,9,88.89
-the winter boots,13,24,54.17,die Winterstiefel,7,10,70.0
+the winter boots,13,24,54.17,die Winterstiefel,8,11,72.72727272727273
 flat,7,7,100.0,flach,10,15,66.67
 freezing,7,8,87.5,eiskalt,7,9,77.78
 weekly,7,8,87.5,wöchentlich,8,8,100.0
@@ -884,7 +884,7 @@ are allowed to,8,8,100.0,darf,12,23,52.17
 to interrupt,10,15,66.67,stören,15,31,48.39
 the class,19,37,51.35,Der Unterricht,10,14,71.43
 the square,7,10,70.0,das viereck,7,9,77.78
-the ruler,7,8,87.5,das lineal,8,8,100.0
+the ruler,8,9,88.88888888888889,das lineal,8,8,100.0
 took,7,10,70.0,habe .. genommen,8,10,80.0
 the calculator,12,20,60.0,der Taschenrechner,8,11,72.73
 the eraser,15,26,57.69,der Radiergummi,7,9,77.78
@@ -896,7 +896,7 @@ experience,15,31,48.39,Erfahrung,14,27,51.85
 foreign languages,7,9,77.78,Fremdsprachen,8,12,66.67
 necessary,17,30,56.67,notwendig,12,23,52.17
 employees,12,22,54.55,Mitarbeiter,9,13,69.23
-the lunchtime,8,10,80.0,die Mittagszeit,7,10,70.0
+the lunchtime,9,12,75.0,die Mittagszeit,7,10,70.0
 the sheep,7,7,100.0,das schaf,7,8,87.5
 useful,8,8,100.0,nützlich,13,22,59.09
 at least,7,9,77.78,wenigstens,9,14,64.29
@@ -913,7 +913,7 @@ grew up,17,32,53.13,sind ... aufgewachsen,12,20,60.0
 shown,14,28,50.0,haben ... gezeigt,9,16,56.25
 the trash,7,8,87.5,der Müll,7,7,100.0
 the laundry,7,10,70.0,Die Wäsche,9,14,64.29
-the roof,7,9,77.78,das Dach,7,10,70.0
+the roof,8,12,66.66666666666666,das Dach,7,10,70.0
 the poor,12,18,66.67,die Armen,8,11,72.73
 the lawn,10,14,71.43,Der Rasen,10,14,71.43
 to mow,7,8,87.5,mähen,9,12,75.0
@@ -924,13 +924,13 @@ except for,9,12,75.0,Außer,10,19,52.63
 most,7,9,77.78,meisten,11,23,47.82608695652174
 inhabitants,7,9,77.78,einwohnen,10,16,62.5
 Did you know,12,19,63.16,wusstest du,7,10,70.0
-most beautiful,7,9,77.78,schönsten,8,12,66.67
+most beautiful,8,10,80.0,schönsten,8,12,66.67
 ship,7,9,77.78,Schiff,8,11,72.73
-to call back,7,9,77.78,zurückrufen,7,8,87.5
+to call back,8,11,72.72727272727273,zurückrufen,7,8,87.5
 to hurry up,9,14,64.29,beeilen,10,21,47.62
-do they remember,9,12,75.0,Erinnern sie sich,10,19,52.63
+do they remember,10,15,66.66666666666666,Erinnern sie sich,10,19,52.63
 called back,11,17,64.71,haben ..  zurückgerufen,8,13,61.54
-occupied,10,14,71.43,besetzt,9,15,60.0
+occupied,11,15,73.33333333333333,besetzt,9,15,60.0
 to miss,15,28,53.57,verpassen,11,21,52.38
 started,16,26,61.54,angefangen,7,11,63.64
 the beginning,15,23,65.22,der anfang,9,14,64.29
@@ -938,18 +938,18 @@ the row,7,7,100.0,Die reihe,8,9,88.89
 The Sequel,11,18,61.11,Die Fortsetzung,8,11,72.73
 the plot,15,27,55.56,Die Handlung,9,13,69.23
 nonsense,8,9,88.89,Quatsch,11,17,64.71
-environmental protection,7,7,100.0,Umweltschutz,9,11,81.82
+environmental protection,8,8,100.0,Umweltschutz,9,11,81.82
 The poems,7,8,87.5,Die Gedichte,7,9,77.78
-to fall in love,7,10,70.0,verlieben,8,11,72.73
+to fall in love,8,12,66.66666666666666,verlieben,8,11,72.73
 the idea,7,8,87.5,die Idee,8,8,100.0
-to suggest,12,17,70.59,vorschlagen,8,13,61.54
+to suggest,12,17,70.59,vorschlagen,9,16,56.25
 for example,11,16,68.75,zum Beispiel,7,8,87.5
 the face,7,10,70.0,das Gesicht,7,8,87.5
 the toothbrush,8,8,100.0,die Zahnbürste,8,10,80.0
 the hairbrush,8,9,88.89,die Haarbürste,8,9,88.89
-brushed,8,10,80.0,haben ... geputzt,10,18,55.56
+brushed,8,10,80.0,haben ... geputzt,11,21,52.38095238095239
 to shave,12,18,66.67,rasieren,8,10,80.0
-thin,7,8,87.5,dünn,8,9,88.89
+thin,7,8,87.5,dünn,9,10,90.0
 The raincoat,7,7,100.0,Der Regenmantel,8,10,80.0
 to put on,8,12,66.67,anziehen,10,21,47.62
 felt,8,9,88.89,hast ... gefühlt,8,9,88.89
@@ -963,7 +963,7 @@ the wind,8,10,80.0,der wind,8,8,100.0
 because of,7,10,70.0,wegen,15,26,57.69
 to jump,7,7,100.0,springen,8,8,100.0
 the wood,7,9,77.78,das holz,10,13,76.92
-the kite,12,17,70.59,der drachen,9,15,60.0
+the kite,12,17,70.59,der drachen,10,16,62.5
 the instructions,21,36,58.33,die Anweisungen,8,13,61.54
 colorful,10,14,71.43,bunte,9,13,69.23
 the throat,7,9,77.78,der hals,9,10,90.0
@@ -971,10 +971,10 @@ the cabbage,8,11,72.73,der kohl,7,7,100.0
 to dry,7,8,87.5,abtrocknen,8,12,66.67
 the sink,8,13,61.54,das Spülbecken,8,8,100.0
 to break,14,27,51.85,zerbrechen,7,9,77.78
-to vacuum,7,9,77.78,Staubsaugen,9,11,81.82
+to vacuum,8,11,72.72727272727273,Staubsaugen,9,11,81.82
 broke,10,15,66.67,habe ... zerbrochen,8,9,88.89
 the spoon,7,8,87.5,der Löffel,8,10,80.0
-between,8,9,88.89,zwischen,8,9,88.89
+between,9,10,90.0,zwischen,8,9,88.89
 to comb,8,9,88.89,kämmen,8,12,66.67
 moist,10,14,71.43,feucht,10,15,66.67
 dry,8,10,80.0,trocken,11,16,68.75
@@ -983,20 +983,20 @@ to throw,12,17,70.59,werfen,7,9,77.78
 the hat,7,10,70.0,Die Mütze,9,14,64.29
 the bracelet,8,12,66.67,das armband,7,8,87.5
 to go with (match),7,10,70.0,zupassen,14,30,46.67
-to spend,7,9,77.78,ausgeben,12,23,52.17
+to spend,8,12,66.66666666666666,ausgeben,12,23,52.17
 The underwear,8,8,100.0,die Unterwäsche,8,11,72.73
 The Jewelry,7,7,100.0,der schmuck,11,15,73.33
 to give away,16,27,59.26,Verschenken,13,23,56.52
 moved in,15,30,50.0,sind ... eingezogen,12,20,60.0
 rest,11,17,64.71,Erholung,7,11,63.64
-to set,14,24,58.33,decken,8,12,66.67
+to set,14,24,58.33,decken,9,15,60.0
 mech e,8,8,100.0,Maschinenbau,7,8,87.5
 crazy,8,9,88.89,verrückt,9,9,100.0
 likable,7,9,77.78,sympathisch,16,31,51.61
 fashion,7,7,100.0,mode,9,15,60.0
 the fur,7,7,100.0,das fell,7,11,63.64
-the animal shelter,7,9,77.78,der Tierheim,7,10,70.0
-to get along,7,10,70.0,sich verstehen,13,27,48.15
+the animal shelter,8,10,80.0,der Tierheim,7,10,70.0
+to get along,8,13,61.53846153846154,sich verstehen,13,27,48.15
 just as,7,9,77.78,genauso,7,7,100.0
 fat,7,7,100.0,dick,8,11,72.73
 cuddly,15,23,65.22,kuschelig,7,9,77.78
@@ -1005,12 +1005,12 @@ to get worked up,10,17,58.82,sich aufregen,7,9,77.78
 patient,18,30,60.0,geduldig,8,12,66.67
 shy,7,9,77.78,schüchtern,14,24,58.33
 electronics stores,8,8,100.0,Elektroläden,11,22,50.0
-round,7,8,87.5,runden,7,9,77.78
+round,8,10,80.0,runden,7,9,77.78
 the travel adapter,7,9,77.78,der Reiseadapter,8,9,88.89
 to explain,7,9,77.78,erklären,8,11,72.73
 lower (prices),7,10,70.0,niedriger,16,27,59.26
 damaged,16,27,59.26,beschädigt,10,14,71.43
-stupid/silly,7,9,77.78,blöd,8,13,61.54
+stupid/silly,8,10,80.0,blöd,8,13,61.54
 to return,15,26,57.69,zurückkehren,8,12,66.67
 to complain,11,16,68.75,sich beschweren,7,10,70.0
 how about,7,10,70.0,Wie wäre es mit,10,18,55.56
@@ -1018,20 +1018,20 @@ to exchange,14,25,56.0,Umtauschen,7,11,63.64
 to describe,7,10,70.0,beschreiben,8,11,72.73
 to get back,7,10,70.0,zurückbekommen,13,25,52.0
 I am not sure,7,11,63.64,Ich bin mir nicht sicher,8,8,100.0
-mountain climbing,10,15,66.67,Bergsteigen,8,10,80.0
+mountain climbing,10,15,66.67,Bergsteigen,9,11,81.81818181818183
 skydiving,7,7,100.0,Fallschirmspringen,7,9,77.78
 risky,7,7,100.0,riskant,7,8,87.5
 in my opinion,7,7,100.0,Meiner Meinung nach,8,11,72.73
-kind of ice cream,7,9,77.78,Eissorte,9,13,69.23
+kind of ice cream,8,10,80.0,Eissorte,9,13,69.23
 whipped cream,7,7,100.0,Schlagsahne,8,8,100.0
 fried,12,20,60.0,gebraten,7,8,87.5
 to consume,10,16,62.5,verbrauchen,15,30,50.0
 to protect,9,14,64.29,beschützen,15,30,50.0
 forests,7,9,77.78,Wälder,11,22,50.0
-on the topic of,7,8,87.5,zum Thema,9,14,64.29
+on the topic of,7,8,87.5,zum Thema,10,16,62.5
 conversations,7,10,70.0,Gespräche,13,23,56.52
 the topics,10,13,76.92,die Themen,7,9,77.78
-the topic,7,9,77.78,das thema,7,8,87.5
+the topic,8,11,72.72727272727273,das thema,7,8,87.5
 stubborn,8,8,100.0,stur,8,12,66.67
 The Mud,10,15,66.67,Der matsch,7,7,100.0
 to take along,7,9,77.78,mitnehmen,11,17,64.70588235294117
@@ -1040,7 +1040,7 @@ to your house (plural),10,14,71.43,zu dir euch Hause,8,13,61.54
 the braces,7,9,77.78,die zahnspange,8,9,88.89
 to introduce,10,19,52.63,vorstellen,13,27,48.15
 the noise,11,19,57.89,die Geräusche,7,10,70.0
-the cage,10,16,62.5,der Käfig,9,13,69.23076923076923
+the cage,10,16,62.5,der Käfig,10,14,71.42857142857143
 to feed,7,7,100.0,füttern,8,9,88.89
 the twins,10,15,66.67,die Zwillinge,7,8,87.5
 generous,13,22,59.09,großzügig,10,13,76.92307692307693
@@ -1048,9 +1048,9 @@ to steal,7,10,70.0,stehlen,8,10,80.0
 introduced,15,30,50.0,haben vorgestellt,9,13,69.23
 thirsty,7,7,100.0,durstig,9,12,75.0
 to charge,7,10,70.0,aufladen,8,12,66.67
-salesperson (male),7,9,77.78,Verkäufer,17,30,56.67
+salesperson (male),9,12,75.0,Verkäufer,17,30,56.67
 the island,7,8,87.5,die insel,7,8,87.5
-the islands,8,8,100.0,die inseln,7,8,87.5
+the islands,8,8,100.0,die inseln,8,10,80.0
 in favor of us,11,15,73.33,"dafür, dass wir",12,19,63.16
 the guidebook,7,9,77.78,der Reiseführer,9,16,56.25
 sense,7,8,87.5,sinn,7,10,70.0
@@ -1059,8 +1059,8 @@ The sunburn,10,16,62.5,der Sonnenbrand,9,10,90.0
 against it,13,24,54.17,dagegen,10,14,71.43
 it would be,7,10,70.0,Es wäre,8,13,61.54
 attractions,11,16,68.75,Sehenswürdigkeiten,8,8,100.0
-century,7,7,100.0,Jahrhundert,8,10,80.0
-the city tour,14,25,56.0,Die Stadtführung,7,10,70.0
+century,8,8,100.0,Jahrhundert,8,10,80.0
+the city tour,14,25,56.0,Die Stadtführung,8,12,66.66666666666666
 the hostel,10,16,62.5,die jugendherberge,8,15,53.33
 the swimming pool,7,10,70.0,das Schwimmbecken,7,8,87.5
 similar,7,9,77.78,ähnlich,10,15,66.67
@@ -1081,10 +1081,10 @@ dressed up,8,12,66.67,haben ... verkleidet,7,10,70.0
 it does not make any sense,8,8,100.0,es macht keinen Sinn,12,22,54.55
 does it make sense,7,9,77.78,macht es sinn,8,12,66.67
 dizzy,15,25,60.0,schwindelig,8,9,88.89
-weak,7,9,77.78,schwach,7,8,87.5
+weak,8,10,80.0,schwach,7,8,87.5
 to throw up,9,13,69.23,übergeben,8,10,80.0
 absolutely,8,12,66.67,unbedingt,13,22,59.09
-throws up,7,10,70.0,übergibt sich,7,11,63.64
+throws up,8,13,61.53846153846154,übergibt sich,7,11,63.64
 your age,8,11,72.73,Ihr alter,7,8,87.5
 insured,7,9,77.78,versichert,7,10,70.0
 The doctor's office,7,10,70.0,Die Praxis,7,9,77.78
@@ -1095,31 +1095,31 @@ nothing at all,8,12,66.67,überhaupt nicht,7,10,70.0
 to come back,7,8,87.5,zurückkommen,7,10,70.0
 contest,7,9,77.78,Wettbewerb,7,11,63.64
 some,7,8,87.5,manche,8,9,88.89
-I am worried,13,23,56.52,ich mache mir sorgen,10,16,62.5
+I am worried,13,23,56.52,ich mache mir sorgen,11,18,61.11111111111112
 to turn,7,9,77.78,abbiegen,8,11,72.73
 to decide,10,18,55.56,sich entscheiden,10,14,71.43
-decided,10,18,55.56,haben sich... entschieden,9,12,75.0
+decided,11,20,55.00000000000001,haben sich... entschieden,9,12,75.0
 the cruise,7,9,77.78,die kreuzfahrt,7,9,77.78
-in order to,7,7,100.0,um zu,7,7,100.0
+in order to,7,7,100.0,um zu,8,8,100.0
 Venice,7,8,87.5,Venedig,8,9,88.89
 to book,7,8,87.5,buchen,8,10,80.0
 on the website,7,10,70.0,auf der website,8,8,100.0
 the wifi,7,7,100.0,das WLAN,8,9,88.89
 in the area,7,8,87.5,in der gegen,8,13,61.54
 the reviews,11,16,68.75,die Bewertungen,9,12,75.0
-the air conditioner,7,9,77.78,die Klimaanlage,8,13,61.54
-to find out,7,9,77.78,herausfinden,12,18,66.67
+the air conditioner,7,9,77.78,die Klimaanlage,9,14,64.28571428571429
+to find out,8,10,80.0,herausfinden,12,18,66.67
 I have never been,14,26,53.85,Es ging mir nie,9,15,60.0
 the scissors,8,10,80.0,die Schere,9,12,75.0
 the ceiling,7,7,100.0,die Decke,8,10,80.0
 celebrated,7,7,100.0,haben ... gefeiert,8,8,100.0
-that is not true,7,8,87.5,das stimmt nicht,9,12,75.0
+that is not true,7,8,87.5,das stimmt nicht,10,14,71.42857142857143
 tidied up,7,10,70.0,haben ... aufgeräumt,8,10,80.0
 no way,7,8,87.5,doch,8,10,80.0
 I am walking the dog,11,18,61.11,ich gehe mit dem hund gassi,7,8,87.5
 jonathan,7,7,100.0,morgenmuffel,7,7,100.0
 never before,8,10,80.0,noch nie,8,11,72.73
-not even,10,15,66.67,nicht einmal,7,11,63.64
+not even,11,17,64.70588235294117,nicht einmal,7,11,63.64
 besides,7,7,100.0,Außerdem,8,12,66.67
 each other,7,9,77.78,einander,8,12,66.67
 got better,8,11,72.73,haben sich ... verbessert,8,12,66.67
@@ -1129,66 +1129,66 @@ paid,7,9,77.78,haben ... bezahlt,7,8,87.5
 the dishwasher,8,11,72.73,die Spülmaschine,8,11,72.73
 still,8,9,88.89,immer noch,8,10,80.0
 the hole,9,15,60.0,das Loch,7,8,87.5
-squeaks,7,7,100.0,quietscht,8,12,66.67
+squeaks,8,9,88.88888888888889,quietscht,8,12,66.67
 the ant,7,8,87.5,die Ameise,8,12,66.67
 the spider,7,7,100.0,die Spinne,8,8,100.0
 the mattress,7,9,77.78,die Matratze,8,10,80.0
-the cabinet,7,7,100.0,der Schrank,8,12,66.67
+the cabinet,7,7,100.0,der Schrank,9,14,64.28571428571429
 The walls,7,7,100.0,Die Wände,8,8,100.0
 the pigeon,10,15,66.67,die Taube,9,16,56.25
 the balcony door,7,7,100.0,die Balkontür,8,8,100.0
 to shut,7,9,77.78,schließen,8,12,66.67
 especially,10,18,55.56,vor allem,14,25,56.0
-square,7,8,87.5,viereckig,7,7,100.0
-Footbridge,8,8,100.0,Steg,8,13,61.54
+square,7,8,87.5,viereckig,8,9,88.88888888888889
+Footbridge,9,9,100.0,Steg,8,13,61.54
 along,7,9,77.78,entlang,8,10,80.0
 impressive,10,16,62.5,beeindruckend,8,11,72.73
 the shade,10,14,71.43,der Schatten,7,10,70.0
 The Summit,7,8,87.5,der Gipfel,9,13,69.23
 The team,11,16,68.75,Die Mannschaft,9,9,100.0
-Poet,8,13,61.54,Dichter,9,11,81.81818181818183
-The housewarming party,7,10,70.0,die Einweihungsparty,7,9,77.78
-scientist (female),7,10,70.0,Wissenschaftlerin,7,9,77.78
-ice skates,7,8,87.5,schlittschuhe,7,9,77.78
+Poet,9,15,60.0,Dichter,9,11,81.81818181818183
+The housewarming party,8,12,66.66666666666666,die Einweihungsparty,7,9,77.78
+scientist (female),8,11,72.72727272727273,Wissenschaftlerin,7,9,77.78
+ice skates,8,10,80.0,schlittschuhe,7,9,77.78
 cute,7,8,87.5,süßes,8,9,88.89
 to get away,7,10,70.0,verreisen,8,12,66.67
 the feathers,7,7,100.0,die Federn,7,8,87.5
 The goat,9,14,64.29,die Ziege,8,11,72.73
-The skin,7,9,77.78,die Haut,8,11,72.73
+The skin,7,9,77.78,die Haut,9,12,75.0
 The pigglet,8,14,57.14,das Ferkel,8,10,80.0
-The Hen,7,9,77.78,Das Huhn,7,7,100.0
+The Hen,7,9,77.78,Das Huhn,8,9,88.88888888888889
 to recommend,9,17,52.94,empfehlen,12,24,50.0
-anyway,7,9,77.78,sowieso,9,9,100.0
+anyway,8,12,66.66666666666666,sowieso,9,9,100.0
 the checking account,11,17,64.71,das Girokonto,8,8,100.0
 to arrive,8,8,100.0,ankommen,8,11,72.72727272727273
-to register,8,9,88.89,sich ... anmelden,12,22,54.55
-with you,7,7,100.0,dabei,8,12,66.67
+to register,9,11,81.81818181818183,sich ... anmelden,12,22,54.55
+with you,8,9,88.88888888888889,dabei,8,12,66.67
 to turn in,9,10,90.0,abgeben,7,11,63.64
 the toll,11,16,68.75,die Gebühr,9,13,69.23
 the signature,8,10,80.0,die Unterschrift,8,9,88.89
 the account number,10,14,71.43,die Kontonummer,8,8,100.0
 the pin number,10,16,62.5,die Geheimzahl,10,14,71.43
-to cash,9,11,81.82,einlösen,7,10,70.0
+to cash,9,11,81.82,einlösen,8,13,61.53846153846154
 the check,10,14,71.43,der scheck,8,9,88.89
 The Hours of Operation,8,9,88.89,die Öffnungszeiten,7,9,77.78
 to deposit,7,8,87.5,einzahlen,7,9,77.78
 to withdraw,14,23,60.87,abheben,9,15,60.0
-missing/absent,8,9,88.89,fehlen,7,8,87.5
+missing/absent,9,11,81.81818181818183,fehlen,8,11,72.72727272727273
 The directions,7,10,70.0,die Wegbeschreibung,8,10,80.0
-The star,7,8,87.5,der stern,8,12,66.67
-to follow,8,10,80.0,zu folgen,9,13,69.23
-at least,7,10,70.0,mindestens,7,8,87.5
+The star,7,8,87.5,der stern,9,13,69.23076923076923
+to follow,8,10,80.0,zu folgen,10,14,71.42857142857143
+at least,9,14,64.28571428571429,mindestens,7,8,87.5
 the goal,7,8,87.5,das Ziel,8,9,88.89
 it is my goal,7,7,100.0,mein ziel ist es,7,10,70.0
-fascinating,7,8,87.5,faszinierend,7,8,87.5
+fascinating,8,9,88.88888888888889,faszinierend,7,8,87.5
 for what,9,13,69.23,Wofür,8,13,61.54
-years ago,7,10,70.0,vor ... jahren,7,10,70.0
+years ago,9,13,69.23076923076923,vor ... jahren,7,10,70.0
 on what,8,11,72.73,Woran,15,30,50.0
 about what,7,11,63.64,wovon,11,20,55.0
 is about,11,21,52.38,handelt ... von,10,20,50.0
 to apply,7,10,70.0,sich ... bewerben,7,11,63.64
-Applied,10,18,55.56,haben sich beworben,8,13,61.54
-to turn on,7,9,77.78,anmachen,7,8,87.5
+Applied,11,20,55.00000000000001,haben sich beworben,8,13,61.54
+to turn on,8,12,66.66666666666666,anmachen,7,8,87.5
 the teenagers,9,11,81.82,Die Jugendlichen,8,12,66.67
 tons of,7,8,87.5,tonnen von,8,8,100.0
 the valley,7,9,77.78,das Tal,8,11,72.73
@@ -1197,7 +1197,7 @@ gorgeous,7,10,70.0,prächtig,8,13,61.54
 to decorate,7,9,77.78,schmücken,7,9,77.78
 refreshing,10,16,62.5,erfrischend,8,9,88.89
 to cool,7,9,77.78,kühlen,8,8,100.0
-to cool down,7,9,77.78,abkühlen,7,8,87.5
+to cool down,7,9,77.78,abkühlen,8,10,80.0
 all around,7,8,87.5,rundum,8,12,66.67
 offered,9,18,50.0,haben ... angeboten,8,13,61.54
 nearly,7,10,70.0,nahezu,7,9,77.78
@@ -1205,10 +1205,10 @@ numerous,7,13,53.85,zahlreich,13,22,59.09
 the facility,13,26,50.0,die einrichtung,7,10,70.0
 The kitchen things,7,7,100.0,Die Küchensachen,8,11,72.73
 The Ad,7,8,87.5,Die Anzeige,7,10,70.0
-The bowl,7,7,100.0,Die Schüssel,7,9,77.78
+The bowl,7,7,100.0,Die Schüssel,8,11,72.72727272727273
 The shopping list,16,32,50.0,Der Einkaufszettel,7,8,87.5
 stainless steel,10,16,62.5,Edelstahl,10,15,66.66666666666666
-cereal,8,10,80.0,Frühstücksflocken,7,7,100.0
+cereal,9,11,81.81818181818183,Frühstücksflocken,7,7,100.0
 The Lady,7,7,100.0,Die Dame,7,8,87.5
 the dishes,8,8,100.0,das Geschirr,9,13,69.23
 the difference,7,10,70.0,der Unterschied,7,10,70.0
@@ -1219,38 +1219,38 @@ therefore,7,8,87.5,darum,7,9,77.78
 to include,7,8,87.5,enthalten,8,18,44.44
 the sales tax,7,8,87.5,die Mehrwertsteuer,7,9,77.78
 to decline,7,8,87.5,ablehnen,9,15,60.0
-to put on makeup,7,9,77.78,sich schminken,7,11,63.64
+to put on makeup,7,9,77.78,sich schminken,8,13,61.53846153846154
 the cutlery,7,8,87.5,das besteck,7,10,70.0
 recently,8,8,100.0,kürzlich,8,12,66.67
 future,10,19,52.63,zukünftiger,9,15,60.0
 east,8,10,80.0,osten,7,7,100.0
-The public,7,8,87.5,Die öffentlichen,8,12,66.67
+The public,7,8,87.5,Die öffentlichen,9,14,64.28571428571429
 transit,8,11,72.73,Verkehrsmittel,9,19,47.37
 to get out,7,7,100.0,aussteigen,9,11,81.81818181818183
 along,7,7,100.0,entlang,7,8,87.5
 got out,7,9,77.78,bist ... ausgestiegen,7,9,77.78
 TRUE,7,7,100.0,waht,8,10,80.0
 fine,7,8,87.5,geldstrafe,8,10,80.0
-to validate,8,11,72.73,Entwerten,13,23,56.52
+to validate,9,13,69.23076923076923,Entwerten,13,23,56.52
 diced,7,9,77.78,gewürfelt,8,9,88.89
 to announce,7,7,100.0,ansagen,8,13,61.54
-to experience,7,10,70.0,erleben,7,9,77.78
+to experience,8,15,53.333333333333336,erleben,7,9,77.78
 the event,8,17,47.06,Die Veranstaltung,12,24,50.0
 to illuminate,7,10,70.0,beleuchten,7,11,63.64
 various,8,13,61.54,verschiedene,7,10,70.0
-spot on,8,12,66.67,goldrichtig,8,11,72.73
-specialty stores,7,9,77.78,fachgeschäfte,9,16,56.25
-I am lost,7,9,77.78,Ich habe mich verlaufen,8,11,72.73
+spot on,9,14,64.28571428571429,goldrichtig,8,11,72.73
+specialty stores,7,9,77.78,fachgeschäfte,10,21,47.61904761904761
+I am lost,8,12,66.66666666666666,Ich habe mich verlaufen,8,11,72.73
 keep the change,7,7,100.0,stimmt so,8,11,72.72727272727273
-Through This,8,13,61.54,dadurch,7,9,77.78
+Through This,8,13,61.54,dadurch,8,10,80.0
 the deposit,8,16,50.0,die anzahlung,8,13,61.54
 to hide,7,10,70.0,ausblenden,8,12,66.67
 The flat rate,9,14,64.29,die Pauschale,8,11,72.73
 The remarks,7,14,50.0,die Anmerkungen,13,24,54.17
 unexpected,8,15,53.33,unerwartet,7,10,70.0
-to receive,9,17,52.94,erhalten,8,12,66.67
-I declare that I agree,7,9,77.78,Ich erkläre mich einverstanden,7,11,63.64
-in-laws,7,7,100.0,Schwiegereltern,7,7,100.0
+to receive,9,17,52.94,erhalten,9,15,60.0
+I declare that I agree,7,9,77.78,Ich erkläre mich einverstanden,8,13,61.53846153846154
+in-laws,8,8,100.0,Schwiegereltern,7,7,100.0
 mother in-law,7,7,100.0,Schwiegermutter,7,7,100.0
 father in-law,7,8,87.5,Schwiegervater,7,7,100.0
 they are visiting,7,9,77.78,sie sind zu besuch,8,9,88.89
@@ -1258,7 +1258,7 @@ what does that mean,7,11,63.64,was heißt das,7,9,77.78
 once a year,7,8,87.5,einmal im jahr,7,7,100.0
 the kitchen scale,7,9,77.78,Die Küchenwaage,7,9,77.78
 to knead,7,8,87.5,kneten,7,10,70.0
-to mix,7,9,77.78,vermischen,8,10,80.0
+to mix,8,10,80.0,vermischen,8,10,80.0
 the filling,7,7,100.0,die Füllung,8,9,88.89
 to cut,7,7,100.0,schneiden,7,9,77.78
 this one,7,8,87.5,der hier,7,12,58.33
@@ -1282,13 +1282,13 @@ adventure,7,7,100.0,abenteuer,7,9,77.78
 relieved,7,9,77.78,erleichtert,7,10,70.0
 I am in a hurry,9,14,64.29,ich habe es eilig,7,8,87.5
 while,7,9,77.78,während,8,14,57.14
-the airline,10,20,50.0,die Fluggesellschaft,7,7,100.0
+the airline,11,22,50.0,die Fluggesellschaft,8,9,88.88888888888889
 dial,7,8,87.5,wählen,8,15,53.33
-the message,8,13,61.54,die Nachricht,7,9,77.78
+the message,9,15,60.0,die Nachricht,7,9,77.78
 to leave behind,7,9,77.78,hinterlassen,7,9,77.78
 on the line,7,10,70.0,dran,7,9,77.78
 to answer,7,8,87.5,melden,9,16,56.25
-to write down,8,13,61.54,notieren,7,7,100.0
+to write down,8,13,61.54,notieren,8,8,100.0
 the connection,10,19,52.63,die Verbindung,8,11,72.73
 to reach,7,10,70.0,erreichen,7,10,70.0
 what ... for,7,10,70.0,wonach,8,16,50.0
@@ -1306,7 +1306,7 @@ to him/it,7,8,87.5,ihm,7,9,77.78
 to us,7,7,100.0,uns,7,7,100.0
 to you (plural),7,7,100.0,euch,7,10,70.0
 to them,7,9,77.78,ihnen,7,7,100.0
-to me,7,7,100.0,mir,7,7,100.0
+to me,8,8,100.0,mir,7,7,100.0
 to you,7,7,100.0,dir,7,7,100.0
 to suffer,7,9,77.78,Leiden,7,8,87.5
 are allowed to,7,10,70.0,dürfen,7,10,70.0
@@ -1316,21 +1316,21 @@ successful,9,13,69.23,erfolgreich,7,14,50.0
 excavator,7,9,77.78,bagger,7,7,100.0
 Passionfruit,7,9,77.78,maracuja,7,12,58.33
 testicle goblin,7,12,58.33,hodenkobold,8,8,100.0
-The weather forecast,0,0,0.0,die Wettervorhersage,0,0,0.0
+The weather forecast,1,2,50.0,die Wettervorhersage,6,9,66.66666666666666
 to download,7,10,70.0,herunterladen,7,8,87.5
 total amount,7,10,70.0,Gesamtbetrag,7,7,100.0
 amount/sum,7,9,77.78,betrag,7,9,77.78
 crashed,7,10,70.0,ist ... abgestürzt,8,10,80.0
 to attempt,7,10,70.0,versuchen,9,15,60.0
-the bandage,7,8,87.5,Das Pflaster,7,12,58.33
+the bandage,8,9,88.88888888888889,Das Pflaster,8,13,61.53846153846154
 to bleed,7,7,100.0,bluten,7,8,87.5
 to injure,7,10,70.0,sich ... verletzen,7,8,87.5
 the toe,7,8,87.5,Der Zeh,7,7,100.0
-The emergency room,7,8,87.5,die Notaufnahme,7,8,87.5
+The emergency room,8,12,66.66666666666666,die Notaufnahme,7,8,87.5
 can you do it,7,9,77.78,schaffst du das,7,8,87.5
 to take off (clothes),7,9,77.78,sich ... ausziehen,7,10,70.0
 to remove,7,10,70.0,abnehmen,7,10,70.0
-favorite dish,7,7,100.0,Lieblingsgericht,7,8,87.5
+favorite dish,8,8,100.0,Lieblingsgericht,7,8,87.5
 to check,8,14,57.14,nachsehen,7,9,77.78
 The wedding ring,7,10,70.0,der Ehering,7,7,100.0
 the traffic light,7,11,63.64,die ampel,7,7,100.0
@@ -1338,12 +1338,12 @@ complained,7,7,100.0,sich ... bewschwert,7,7,100.0
 dissapointed,7,9,77.78,enttäuscht,7,8,87.5
 to translate,7,8,87.5,übersetzen,7,11,63.64
 the spelling,7,10,70.0,die rechtschreibung,7,8,87.5
-to pronounce,7,7,100.0,aussprechen,7,8,87.5
+to pronounce,7,7,100.0,aussprechen,8,9,88.88888888888889
 the performance,7,9,77.78,Die Leistung,7,10,70.0
 awake,7,7,100.0,wach,7,8,87.5
-to compare,7,8,87.5,vergleichen,7,9,77.78
+to compare,7,8,87.5,vergleichen,8,11,72.72727272727273
 the schedule,7,9,77.78,der Stundenplan,7,7,100.0
-the announcement,7,8,87.5,die ansage,7,9,77.78
+the announcement,7,8,87.5,die ansage,8,12,66.66666666666666
 the passengers,7,7,100.0,die passagiere,8,9,88.89
 to cover,7,7,100.0,zudecken,7,8,87.5
 rare,7,7,100.0,selten,7,8,87.5
@@ -1351,63 +1351,63 @@ works out,7,7,100.0,klappt,7,9,77.78
 the eagle,7,7,100.0,der Adler,7,8,87.5
 the diversity,7,10,70.0,die Vielfalt,7,8,87.5
 the lighthouse,7,9,77.78,der Leuchtturm,7,11,63.64
-The fact,5,8,62.5,Die Tatsache,7,8,87.5
+The fact,6,10,60.0,Die Tatsache,7,8,87.5
 the novel,5,6,83.33,der roman,7,7,100.0
 the nightmare,7,9,77.78,der Alptraum,7,8,87.5
-they still have,5,10,50.0,es noch gibt,7,12,58.33
+they still have,6,13,46.15384615384615,es noch gibt,7,12,58.33
 sharp (taste),5,6,83.33,würzigen,7,10,70.0
 low-fat,6,8,75.0,fettarme,7,8,87.5
 salted,6,8,75.0,gesalzene,7,8,87.5
-not anywhere,5,7,71.43,nirgends,7,9,77.78
-The exercise bike,5,8,62.5,der heimtrainer,7,10,70.0
-to weigh,5,6,83.33,wiegen,7,11,63.64
-valuable,5,7,71.43,wertvoll,7,10,70.0
-to lift,5,7,71.43,heben,7,11,63.64
+not anywhere,6,9,66.66666666666666,nirgends,7,9,77.78
+The exercise bike,6,10,60.0,der heimtrainer,7,10,70.0
+to weigh,7,9,77.77777777777779,wiegen,7,11,63.64
+valuable,6,9,66.66666666666666,wertvoll,8,11,72.72727272727273
+to lift,6,9,66.66666666666666,heben,7,11,63.64
 to keep,5,7,71.43,behalten,8,14,57.14
-we did it,5,7,71.43,Wir haben es geschafft,8,13,61.54
-to relax,5,8,62.5,sich ausruhen,7,10,70.0
+we did it,6,8,75.0,Wir haben es geschafft,8,13,61.54
+to relax,6,11,54.54545454545454,sich ausruhen,7,10,70.0
 it is worth it for you,6,7,85.71,es lohnt sich für Sie,9,16,56.25
 the selection,6,8,75.0,die Auswahl,7,11,63.64
 to take care of,5,5,100.0,sich kümmern um,7,9,77.78
-to lose weight,5,5,100.0,abnehmen,7,10,70.0
+to lose weight,5,5,100.0,abnehmen,8,13,61.53846153846154
 to bark,6,6,100.0,bellen,7,8,87.5
 look out for,6,8,75.0,achtet auf,7,8,87.5
-behaved,5,5,100.0,verhalten,8,15,53.333333333333336
-by the way,6,7,85.71,Übrigens,7,8,87.5
+behaved,6,9,66.66666666666666,verhalten,8,15,53.333333333333336
+by the way,7,10,70.0,Übrigens,7,8,87.5
 to save (money),5,5,100.0,sparen,7,9,77.78
-on time,5,5,100.0,rechtzeitig,8,10,80.0
-to make an effort,6,7,85.71,bemühen sich,8,14,57.14
-polite,5,5,100.0,höflich,7,8,87.5
+on time,6,6,100.0,rechtzeitig,8,10,80.0
+to make an effort,6,7,85.71,bemühen sich,9,16,56.25
+polite,5,5,100.0,höflich,8,10,80.0
 to posses,6,8,75.0,besitzen,9,16,56.25
-either,6,6,100.0,entweder,7,10,70.0
+either,7,7,100.0,entweder,7,10,70.0
 compensation,5,6,83.33,entschädigung,9,17,52.94
 to spend the night,6,6,100.0,ubernachten,7,11,63.64
-to transfer,5,6,83.33,umsteigen,8,14,57.14
+to transfer,6,8,75.0,umsteigen,8,14,57.14
 what bad luck,6,6,100.0,so ein pech,7,9,77.78
-to show,3,4,75.0,zeigen,7,11,63.64
-to look,2,2,100.0,schauen,7,8,87.5
-look!,2,2,100.0,schau!,7,11,63.64
-even though,3,4,75.0,obwohl,7,9,77.78
-The Relationship,3,4,75.0,Das Verhältnis,8,12,66.67
-brother-in-law,3,3,100.0,Schwager,7,7,100.0
+to show,4,6,66.66666666666666,zeigen,7,11,63.64
+to look,3,3,100.0,schauen,7,8,87.5
+look!,3,3,100.0,schau!,7,11,63.64
+even though,5,7,71.42857142857143,obwohl,7,9,77.78
+The Relationship,6,10,60.0,Das Verhältnis,8,12,66.67
+brother-in-law,4,4,100.0,Schwager,7,7,100.0
 sister-in-law,2,2,100.0,Schwägerin,7,7,100.0
-fluent,2,2,100.0,fließend,7,8,87.5
-arrival,2,2,100.0,ankunft,7,9,77.78
-made of,0,0,0.0,ausbestehen,7,11,63.64
+fluent,3,4,75.0,fließend,7,8,87.5
+arrival,5,7,71.42857142857143,ankunft,7,9,77.78
+made of,2,5,40.0,ausbestehen,7,11,63.64
 instead,0,0,0.0,stattdessen,7,13,53.85
 the slice,1,2,50.0,die Scheibe,8,12,66.66666666666666
-to enjoy,0,0,0.0,genießen,7,7,100.0
+to enjoy,1,2,50.0,genießen,7,7,100.0
 the debts,0,0,0.0,die schulden,7,9,77.78
 my own,1,1,100.0,meine eigena,7,9,77.78
-dependent,1,1,100.0,abhängig,7,8,87.5
-constantly,0,0,0.0,ständig,5,5,100.0
-to solve,0,0,0.0,lösen,5,7,71.43
+dependent,5,9,55.55555555555556,abhängig,7,8,87.5
+constantly,1,2,50.0,ständig,6,7,85.71428571428571
+to solve,1,2,50.0,lösen,6,10,60.0
 due,0,0,0.0,fällig,6,8,75.0
-to record,0,0,0.0,aufnehmen,5,6,83.33
-to research,0,0,0.0,recherchieren,5,8,62.5
-therefore,0,0,0.0,deswegen,5,5,100.0
-to switch on,0,0,0.0,einschalten,0,0,0.0
-armed,0,0,0.0,bewaffnet,0,0,0.0
-the shark,0,0,0.0,der haifisch,0,0,0.0
-to catch,0,0,0.0,fangen,0,0,0.0
-caught,0,0,0.0,haben ... gefangen,0,0,0.0
+to record,1,4,25.0,aufnehmen,6,8,75.0
+to research,2,2,100.0,recherchieren,6,10,60.0
+therefore,2,2,100.0,deswegen,6,8,75.0
+to switch on,2,3,66.66666666666666,einschalten,6,8,75.0
+armed,1,1,100.0,bewaffnet,6,7,85.71428571428571
+the shark,2,2,100.0,der haifisch,6,6,100.0
+to catch,2,3,66.66666666666666,fangen,6,8,75.0
+caught,2,2,100.0,haben ... gefangen,6,7,85.71428571428571

@@ -142,14 +142,14 @@ with review_tab:
 
 
     with english_to_german_tab:
-        with st.form('English to German'):
+        with st.form('English to German', enter_to_submit=True):
             submit_english_to_german = st.form_submit_button('Run English to German/Show Answer')
 
             # make sure yes/no buttons disabled until ready
             if 'yes_no_disabled' not in st.session_state:
                 st.session_state.yes_no_disabled = True
 
-            yes_col, no_col = st.columns(2)
+            yes_col, no_col = st.columns([.05, .95])
             with yes_col:
                 st.session_state.yes_button = st.form_submit_button(label='Yes',
                                                                     disabled=st.session_state.yes_no_disabled)
@@ -159,7 +159,6 @@ with review_tab:
                 st.session_state.no_button = st.form_submit_button(label='No',
                                                                    disabled=st.session_state.yes_no_disabled,
                                                                    on_click=disable_buttons())
-
             if submit_english_to_german:
 
                 # get a subset of words based on the parameters
