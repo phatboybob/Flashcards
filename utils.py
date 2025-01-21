@@ -262,5 +262,16 @@ def enable_buttons():
 
 def disable_buttons():
     """Disable any buttons with the session state of 'disabled' (yes and no)
+    enables submit button. I don't like this but it works and buttons are HARD
     """
     st.session_state.yes_no_disabled = True
+    st.session_state.submit_button_disabled = False
+
+
+def switch_buttons():
+    """switches the yes/no and the submit buttons state from
+    enabled (clickable) to disablee (not clickable.)
+    """
+    st.session_state.yes_no_disabled = not st.session_state.yes_no_disabled
+    st.session_state.submit_button_disabled = not st.session_state.yes_no_disabled
+

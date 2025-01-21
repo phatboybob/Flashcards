@@ -21,8 +21,8 @@ from utils import (
                     update_correct_word,
                     update_incorrect_word,
                     merge_and_print_dataframes,
-                    enable_buttons,
                     disable_buttons,
+                    switch_buttons,
                   )
 
 DIRECTION_ENGLISH = 'English'
@@ -142,8 +142,11 @@ with review_tab:
 
 
     with english_to_german_tab:
-        with st.form('English to German', enter_to_submit=True):
-            submit_english_to_german = st.form_submit_button('Run English to German/Show Answer')
+        with st.form('English to German'):
+            if 'submit_button_disabled' not in st.session_state:
+                st.session_state.submit_button_disabled = False
+            submit_english_to_german = st.form_submit_button(label='Run English to German/Show Answer',
+                                                             disabled=st.session_state.submit_button_disabled)
 
             # make sure yes/no buttons disabled until ready
             if 'yes_no_disabled' not in st.session_state:
@@ -175,7 +178,8 @@ with review_tab:
                     st.session_state.sample_copy = st.session_state.sample
 
                     # this happens on next page refresh (like pressing a button)
-                    enable_buttons()
+                    # enable yes/no buttons and disable run.
+                    switch_buttons()
 
                 # set word to ask and display
                 if 'word' in st.session_state:
@@ -195,7 +199,7 @@ with review_tab:
             if st.session_state.yes_button:
                 # This executes for the next button pressed,
                 # which should only ever be 'Run English to German/Show Answer'
-                enable_buttons()
+                switch_buttons()
                 update_correct_word(direction=DIRECTION_ENGLISH,
                                     from_word=st.session_state.word,
                                     df=st.session_state.sample_copy)
@@ -216,7 +220,7 @@ with review_tab:
             if st.session_state.no_button:
                 # This executes for the next button pressed,
                 # which should only ever be 'Run English to German/Show Answer'
-                enable_buttons()
+                switch_buttons()
                 update_incorrect_word(direction=DIRECTION_ENGLISH,
                                       from_word=st.session_state.word,
                                       df=st.session_state.sample_copy)
