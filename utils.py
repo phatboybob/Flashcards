@@ -3,8 +3,6 @@ Utilities for the Streamlit German Flashcards app
 Created by Lori Jackson January 2025
 """
 
-import os
-
 import pandas
 import streamlit as st
 
@@ -67,6 +65,8 @@ def get_flashcard_dataframe(flashcard_path=LORIS_FLASHCARDS_CSV):
         flashcard_path,
         names=COLUMNS_AND_TYPES.keys(),
         dtype=COLUMNS_AND_TYPES,
+        header=None,
+        skiprows=1
     ).fillna(0)
     return flashcards_df
 
@@ -259,7 +259,7 @@ def write_df_to_csv(dataframe,
         filename (output filename, optional): output filename csv to write dataframe to.
         Defaults to LORIS_FLASHCARDS_CSV.
     """
-    dataframe.to_csv(filepath, index=False, header=False)
+    dataframe.to_csv(filepath, index=False, header=True)
 
 
 def remove_word(direction):
