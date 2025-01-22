@@ -8,8 +8,8 @@ import os
 import pandas
 import streamlit as st
 
-LORIS_FLASHCARDS_CSV = 'Flashcards_lori.csv'
-# LORIS_FLASHCARDS_CSV = 'sample.csv'
+# LORIS_FLASHCARDS_CSV = 'Flashcards_lori.csv'
+LORIS_FLASHCARDS_CSV = 'sample.csv'
 DIRECTION_ENGLISH = 'English'
 DIRECTION_GERMAN = 'German'
 COLUMNS_AND_TYPES = {f'{DIRECTION_ENGLISH} Word': str,
