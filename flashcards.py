@@ -8,7 +8,7 @@ Created by Lori Jackson January 2025
 import streamlit as st
 
 from utils import (
-                    load_flashcard_data,
+                    get_flashcard_dataframe,
                     view_flashcard_data_editor,
                     view_flashcard_table,
                     get_vocab_sample,
@@ -20,10 +20,11 @@ from utils import (
                     clear_values,
                     update_correct_word,
                     update_incorrect_word,
-                    merge_and_print_dataframes,
+                    merge_dataframes,
                     disable_buttons,
                     switch_buttons,
                     write_df_to_csv,
+                    get_flashcard_filepath_by_user,
                   )
 
 DIRECTION_ENGLISH = 'English'
@@ -36,7 +37,10 @@ st.set_page_config(page_title='Flashcards',
                    )
 
 if 'flashcards_df' not in st.session_state:
-    st.session_state.flashcards_df = load_flashcard_data()
+    st.session_state.flashcards_df = get_flashcard_dataframe()
+
+if 'current_user' not in st.session_state:
+    st.session_state.current_user = 'Lori'
 
 # if 'flashcards_df' not in st.session_state:
 #     flashcards_data = st.file_uploader('Choose your flashcards csv')
@@ -47,6 +51,9 @@ review_tab, view_tab = st.tabs(['Review', 'Modify/View'])
 with review_tab:
     with st.form('vocab_list_form'):
         parameters_container = st.container()
+        current_user = parameters_container.selectbox(label='Current User',
+                                                      options=('Lori', 'Jonathan', 'Sample'),
+                                                      )
         number_to_ask = parameters_container.text_input(label='Number of words to ask',
                                                         value=20,
                                                         help=('This is the number of words '
@@ -69,9 +76,14 @@ with review_tab:
         show_selection = st.form_submit_button('Set Parameters')
 
     if show_selection:
+        if st.session_state.current_user is not current_user:
+            file_path = get_flashcard_filepath_by_user(current_user)
+            st.session_state.flashcards_df = get_flashcard_dataframe(flashcard_path=file_path)
+            st.session_state.current_user = current_user
         params = set_params(number_to_ask=number_to_ask,
                             correct_count=correct_count,
                             percent_correct=percent_correct,
+                            current_user=current_user
                             )
 
     german_to_english_tab, english_to_german_tab = st.tabs(['Translate German to English',
@@ -123,9 +135,16 @@ with review_tab:
                                         'Hit "Show Selection" to get a new selection of words')
 
                             # merge the updated correct counts with
-                            # original data and print to file
-                            merge_and_print_dataframes(old_df=st.session_state.flashcards_df,
-                                                       new_df=st.session_state.sample_copy)
+                            # original data
+                            merge_dataframes(old_df=st.session_state.flashcards_df,
+                                             new_df=st.session_state.sample_copy)
+
+                            # get filepath by user
+                            filepath = get_flashcard_filepath_by_user(user=st.session_state.current_user)
+
+                            # write that shit out
+                            write_df_to_csv(filepath=filepath,
+                                            dataframe=st.session_state.flashcards_df)
                             st.markdown('# Summary: \n '
                                         f'{view_flashcard_table(
                                             st.session_state.sample_copy)}')
@@ -214,9 +233,16 @@ with review_tab:
                                 'Hit "Show Selection" to get a new selection of words')
 
                     # merge the updated correct counts with
-                    # original data and print to file
-                    merge_and_print_dataframes(old_df=st.session_state.flashcards_df,
-                                               new_df=st.session_state.sample_copy)
+                    # original data
+                    merge_dataframes(old_df=st.session_state.flashcards_df,
+                                     new_df=st.session_state.sample_copy)
+
+                    # get filepath by user
+                    filepath = get_flashcard_filepath_by_user(user=st.session_state.current_user)
+
+                    #write that shit out
+                    write_df_to_csv(filepath=filepath,
+                                    dataframe=st.session_state.flashcards_df)
                     st.markdown('# Summary: \n '
                                 f'{view_flashcard_table(
                                     st.session_state.sample_copy)}')
@@ -236,9 +262,17 @@ with review_tab:
 
 with view_tab:
     with st.form(key='save to file'):
+        st.markdown(f'# Currently Viewing :red[{st.session_state.current_user}\'s] Data')
         save_to_csv = st.form_submit_button(label='Save')
+        uploaded_csv = st.file_uploader(label='Choose your flashcards file '
+                                              'and the press the "Upload" button',
+                                        type='csv')
+        upload = st.form_submit_button(label='Upload')
         if save_to_csv:
             write_df_to_csv(dataframe=st.session_state.flashcards_df,
                             )
+        if upload and uploaded_csv is not None:
+            st.session_state.flashcards_df = get_flashcard_dataframe(uploaded_csv)
+
     view_flashcard_data_editor(flashcards_df=st.session_state.flashcards_df,
                                )
