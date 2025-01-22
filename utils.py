@@ -3,13 +3,12 @@ Utilities for the Streamlit German Flashcards app
 Created by Lori Jackson January 2025
 """
 
-import os
-
 import pandas
 import streamlit as st
 
-# LORIS_FLASHCARDS_CSV = 'Flashcards_lori.csv'
-LORIS_FLASHCARDS_CSV = 'sample.csv'
+LORIS_FLASHCARDS_CSV = 'Flashcards_lori.csv'
+JONATHAN_FLASHCARDS_CSV = 'jonathan_data.csv'
+# LORIS_FLASHCARDS_CSV = 'sample.csv'
 DIRECTION_ENGLISH = 'English'
 DIRECTION_GERMAN = 'German'
 COLUMNS_AND_TYPES = {f'{DIRECTION_ENGLISH} Word': str,
@@ -35,19 +34,41 @@ COLUM_CONFIG = {f'{DIRECTION_ENGLISH} Word': st.column_config.TextColumn(require
                     default=0.0)
                }
 
-def load_flashcard_data(flashcard_path=LORIS_FLASHCARDS_CSV):
+def get_flashcard_filepath_by_user(user='Lori'):
     """Read in the default csv. Unless it's not there.
 
     Returns:
         dataframe: the pandas dataframe of the csv. otherwise None
     """
-    if os.path.exists(flashcard_path):
-        flashcards_df = pandas.read_csv(
-            flashcard_path,
-            names=COLUMNS_AND_TYPES.keys(),
-            dtype=COLUMNS_AND_TYPES,
-        ).fillna(0)
-        return flashcards_df
+    match user:
+        case 'Lori':
+            flashcard_path = LORIS_FLASHCARDS_CSV
+        case 'Jonathan':
+            flashcard_path = JONATHAN_FLASHCARDS_CSV
+        case 'Sample':
+            flashcard_path = 'sample.csv'
+        case _:
+            flashcard_path = 'sample.csv'
+    return flashcard_path
+
+
+def get_flashcard_dataframe(flashcard_path=LORIS_FLASHCARDS_CSV):
+    """Uploads a csv and returns it as a dataframe
+
+    Args:
+        flashcard_path (path, optional): path to a csv. Defaults to LORIS_FLASHCARDS_CSV.
+
+    Returns:
+        dataframe: dataframe conversion of the csv
+    """
+    flashcards_df = pandas.read_csv(
+        flashcard_path,
+        names=COLUMNS_AND_TYPES.keys(),
+        dtype=COLUMNS_AND_TYPES,
+        header=None,
+        skiprows=1
+    ).fillna(0)
+    return flashcards_df
 
 
 def view_flashcard_data_editor(flashcards_df):
@@ -61,7 +82,7 @@ def view_flashcard_data_editor(flashcards_df):
                                                         column_config=COLUM_CONFIG,
                                                         )
     else:
-        st.write("please upload data")
+        st.write("Please Upload Data")
 
 
 def view_flashcard_table(flashcards_df):
@@ -131,6 +152,7 @@ def set_other_direction(direction):
 def set_params(number_to_ask,
                correct_count,
                percent_correct,
+               current_user,
               ):
     """Sets the parameters for what words to ask
 
@@ -143,6 +165,7 @@ def set_params(number_to_ask,
     return {'number_to_ask': number_to_ask,
             'correct_count': correct_count,
             'percent_correct': percent_correct,
+            'current_user': current_user,
     }
 
 
@@ -213,7 +236,7 @@ def update_incorrect_word(direction, from_word, df):
     df.loc[df[f'{direction} Word'] == from_word, f'{direction} Percent Correct'] = correct_percent
 
 
-def merge_and_print_dataframes(old_df, new_df):
+def merge_dataframes(old_df, new_df):
     """Merges the new and old dataframe, overwriting the old with the new
 
     Args:
@@ -225,13 +248,9 @@ def merge_and_print_dataframes(old_df, new_df):
     # merge the sample dataframe into the main dataframe
     old_df.update(new_df)
 
-    # write that shit out
-    write_df_to_csv(filename=LORIS_FLASHCARDS_CSV,
-                    dataframe=old_df)
-
 
 def write_df_to_csv(dataframe,
-                    filename=LORIS_FLASHCARDS_CSV,
+                    filepath=LORIS_FLASHCARDS_CSV,
                     ):
     """writes a dataframe to csv
 
@@ -240,7 +259,7 @@ def write_df_to_csv(dataframe,
         filename (output filename, optional): output filename csv to write dataframe to.
         Defaults to LORIS_FLASHCARDS_CSV.
     """
-    dataframe.to_csv(filename, index=False, header=False)
+    dataframe.to_csv(filepath, index=False, header=True)
 
 
 def remove_word(direction):
