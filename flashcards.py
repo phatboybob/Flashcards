@@ -248,6 +248,9 @@ with review_tab:
                                     st.session_state.sample_copy)}')
 
                     clear_values()
+                    del st.session_state.submit_button_disabled
+                    del st.session_state.yes_no_disabled
+
             if st.session_state.no_button:
                 # This executes for the next button pressed,
                 # which should only ever be 'Run English to German/Show Answer'
