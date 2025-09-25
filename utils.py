@@ -71,12 +71,43 @@ def get_flashcard_dataframe(flashcard_path=LORIS_FLASHCARDS_CSV):
     return flashcards_df
 
 
-def view_flashcard_data_editor(flashcards_df):
+def view_flashcard_data_editor(flashcards_df,
+                               english_min_correct=0,
+                               english_max_correct=100,
+                               german_min_correct=0,
+                               german_max_correct=100,
+                               english_min_call=0,
+                               english_max_call=100,
+                               german_min_call=0,
+                               german_max_call=100,
+                               english_min_percent=0.0,
+                               english_max_percent=100.0,
+                               german_min_percent=0.0,
+                               german_max_percent=100.0,
+                               ):
     """displays everything in the review panel
     """
-    if not flashcards_df.empty:
-        st.session_state.flashcards_df = st.data_editor(
-                                                        data=flashcards_df,
+
+
+
+
+    filtered_english_count = flashcards_df[
+       (flashcards_df[f'{DIRECTION_ENGLISH} Correct Count'] <= english_max_correct)
+       & (english_min_correct <= flashcards_df[f'{DIRECTION_ENGLISH} Correct Count'])
+       & (flashcards_df[f'{DIRECTION_GERMAN} Correct Count'] <= german_max_correct)
+       & (german_min_correct <= flashcards_df[f'{DIRECTION_GERMAN} Correct Count'])
+       & (flashcards_df[f'{DIRECTION_ENGLISH} Call Count'] <= english_max_call)
+       & (english_min_call <= flashcards_df[f'{DIRECTION_ENGLISH} Call Count'])
+       & (flashcards_df[f'{DIRECTION_GERMAN} Call Count'] <= german_max_call)
+       & (german_min_call <= flashcards_df[f'{DIRECTION_GERMAN} Call Count'])
+       & (flashcards_df[f'{DIRECTION_ENGLISH} Percent Correct'] <= english_max_percent)
+       & (english_min_percent <= flashcards_df[f'{DIRECTION_ENGLISH} Percent Correct'])
+       & (flashcards_df[f'{DIRECTION_GERMAN} Percent Correct'] <= german_max_percent)
+       & (german_min_percent <= flashcards_df[f'{DIRECTION_GERMAN} Percent Correct'])
+    ]
+    if not filtered_english_count.empty:
+        st.data_editor(
+                                                        data=filtered_english_count,
                                                         use_container_width=False,
                                                         num_rows='dynamic',
                                                         column_config=COLUM_CONFIG,
