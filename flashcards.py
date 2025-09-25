@@ -276,6 +276,58 @@ with view_tab:
                             )
         if upload and uploaded_csv is not None:
             st.session_state.flashcards_df = get_flashcard_dataframe(uploaded_csv)
+    with st.expander('Filter Data'):
+        min_value = 100
+        max_value = 0
+
+        english_min_correct, english_max_correct = st.slider(
+        'English Min and Max Correct Count to Display',
+        min_value=min_value,
+        max_value=max_value,
+        value=[min_value, max_value])
+
+        english_min_call, english_max_call = st.slider(
+        'English Min and Max Call Count to Display',
+        min_value=min_value,
+        max_value=max_value,
+        value=[min_value, max_value])
+
+        english_min_percent, english_max_percent = st.slider(
+        'English Min and Max Percent Count to Display',
+        min_value=min_value,
+        max_value=max_value,
+        value=[min_value, max_value])
+
+        german_min_correct, german_max_correct = st.slider(
+        'German Min and Max Correct Count to Display',
+        min_value=min_value,
+        max_value=max_value,
+        value=[min_value, max_value])
+
+        german_min_call, german_max_call = st.slider(
+        'German Min and Max Call Count to Display',
+        min_value=min_value,
+        max_value=max_value,
+        value=[min_value, max_value])
+
+        german_min_percent, german_max_percent = st.slider(
+        'German Min and Max Percent Count to Display',
+        min_value=min_value,
+        max_value=max_value,
+        value=[min_value, max_value])
+
 
     view_flashcard_data_editor(flashcards_df=st.session_state.flashcards_df,
+                               english_min_correct=english_min_correct,
+                               english_max_correct=english_max_correct,
+                               german_min_correct=german_min_correct,
+                               german_max_correct=german_max_correct,
+                               english_min_call=english_min_call,
+                               english_max_call=english_max_call,
+                               german_min_call=german_min_call,
+                               german_max_call=german_max_call,
+                               english_min_percent=english_min_percent,
+                               english_max_percent=english_max_percent,
+                               german_min_percent=german_min_percent,
+                               german_max_percent=german_max_percent,
                                )
