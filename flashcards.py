@@ -297,11 +297,13 @@ with review_tab:
         if 'show_form' in st.session_state and st.session_state.show_form:
             with st.form('random form e2g', clear_on_submit=True):
                 if 'sample_copy' in st.session_state:
-                    st.markdown('# Summary: \n '
-                                f'{view_flashcard_table(
-                                    st.session_state.sample_copy)}')
+                    st.markdown('# Summary:')
+                    view_flashcard_table(
+                                    st.session_state.sample_copy)
                 run_again_button = st.form_submit_button('Click here to Run Selected words Again')
                 if run_again_button:
+                    st.session_state.run_results_again = True
+                    st.session_state.show_form = False
                     clear_values()
 
 
