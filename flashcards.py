@@ -55,7 +55,7 @@ with review_tab:
                                                       options=('Lori', 'Jonathan', 'Sample'),
                                                       )
         number_to_ask = parameters_container.text_input(label='Number of words to ask',
-                                                        value=20,
+                                                        value=10,
                                                         help=('This is the number of words '
                                                               'that will be asked in this session'))
         correct_count = parameters_container.text_input(label='Only show if correct less than:',
@@ -93,13 +93,25 @@ with review_tab:
             st.session_state.my_answer = st.text_input(label='Type Answer Here:')
             submit = st.form_submit_button('Run German to English')
             if submit:
+                if 'show_form' in st.session_state:
+                    st.session_state.show_form = False
                 # get a subset of words based on the parameters
                 if 'sample' not in st.session_state:
-                    st.session_state.sample = get_vocab_sample(number_to_ask=number_to_ask,
-                                                               percent_correct=percent_correct,
-                                                               correct_count=correct_count,
-                                                               direction = DIRECTION_GERMAN
-                                                              )
+                    try:
+                        rerun_list = st.session_state.results_df[st.session_state.results_df['Run Again']=='True']
+                    except AttributeError:
+                        rerun_list = []
+                    if ('run_results_again' in st.session_state
+                        and st.session_state.run_results_again
+                        and not rerun_list.empty):
+                        st.session_state.sample = rerun_list
+                        del st.session_state['run_results_again']
+                    else:
+                        st.session_state.sample = get_vocab_sample(number_to_ask=number_to_ask,
+                                                                percent_correct=percent_correct,
+                                                                correct_count=correct_count,
+                                                                direction=DIRECTION_GERMAN
+                                                                )
                     # code removes word from sample as user gets it right.
                     # code updates sample_copy with correct counts, then merges
                     # that into the original dataframe
@@ -145,11 +157,10 @@ with review_tab:
                             # write that shit out
                             write_df_to_csv(filepath=filepath,
                                             dataframe=st.session_state.flashcards_df)
-                            st.markdown('# Summary: \n '
-                                        f'{view_flashcard_table(
-                                            st.session_state.sample_copy)}')
 
-                            clear_values()
+                            st.session_state.show_form = True
+
+                            clear_values('show_form')
                     else:
                         st.markdown('# Incorrect. The correct '
                                     f' answer for :blue[{st.session_state.word}] is '
@@ -159,7 +170,18 @@ with review_tab:
                                               from_word=st.session_state.word,
                                               df=st.session_state.sample_copy)
                         del st.session_state['word']
-
+                        st.session_state.show_form = False
+        if 'show_form' in st.session_state and st.session_state.show_form:
+            with st.form('random form', clear_on_submit=True):
+                if 'sample_copy' in st.session_state:
+                    st.markdown('# Summary:')
+                    view_flashcard_table(
+                                    st.session_state.sample_copy)
+                run_again_button = st.form_submit_button('Click here to Run Selected words Again')
+                if run_again_button:
+                    st.session_state.run_results_again = True
+                    st.session_state.show_form = False
+                    clear_values()
 
     with english_to_german_tab:
         with st.form('English to German'):
@@ -183,14 +205,25 @@ with review_tab:
                                                                    disabled=st.session_state.yes_no_disabled,
                                                                    on_click=disable_buttons())
             if submit_english_to_german:
-
+                if 'show_form' in st.session_state:
+                    st.session_state.show_form = False
                 # get a subset of words based on the parameters
                 if 'sample' not in st.session_state:
-                    st.session_state.sample = get_vocab_sample(number_to_ask=number_to_ask,
-                                                               percent_correct=percent_correct,
-                                                               correct_count=correct_count,
-                                                               direction = DIRECTION_ENGLISH
-                                                              )
+                    try:
+                        rerun_list = st.session_state.results_df[st.session_state.results_df['Run Again']=='True']
+                    except AttributeError:
+                        rerun_list = []
+                    if ('run_results_again' in st.session_state
+                        and st.session_state.run_results_again
+                        and not rerun_list.empty):
+                        st.session_state.sample = rerun_list
+                        del st.session_state['run_results_again']
+                    else:
+                        st.session_state.sample = get_vocab_sample(number_to_ask=number_to_ask,
+                                                                percent_correct=percent_correct,
+                                                                correct_count=correct_count,
+                                                                direction = DIRECTION_ENGLISH
+                                                                )
 
                     # code removes word from sample as user gets it right.
                     # code updates sample_copy with correct counts, then merges
@@ -228,6 +261,7 @@ with review_tab:
                     set_word_line_values(direction=DIRECTION_ENGLISH,
                                          other_direction=set_other_direction(DIRECTION_ENGLISH))
                     st.markdown(f'# {st.session_state.word}')
+                    st.session_state.show_form = False
                 else:
                     st.markdown('# You got them all correct. '
                                 'Hit "Show Selection" to get a new selection of words')
@@ -243,11 +277,9 @@ with review_tab:
                     #write that shit out
                     write_df_to_csv(filepath=filepath,
                                     dataframe=st.session_state.flashcards_df)
-                    st.markdown('# Summary: \n '
-                                f'{view_flashcard_table(
-                                    st.session_state.sample_copy)}')
+                    st.session_state.show_form = True
 
-                    clear_values()
+                    clear_values('show_form')
                     del st.session_state.submit_button_disabled
                     del st.session_state.yes_no_disabled
 
@@ -261,6 +293,16 @@ with review_tab:
                 set_word_line_values(direction=DIRECTION_ENGLISH,
                                      other_direction=set_other_direction(DIRECTION_ENGLISH))
                 st.markdown(f'# {st.session_state.word}')
+                st.session_state.show_form = False
+        if 'show_form' in st.session_state and st.session_state.show_form:
+            with st.form('random form e2g', clear_on_submit=True):
+                if 'sample_copy' in st.session_state:
+                    st.markdown('# Summary: \n '
+                                f'{view_flashcard_table(
+                                    st.session_state.sample_copy)}')
+                run_again_button = st.form_submit_button('Click here to Run Selected words Again')
+                if run_again_button:
+                    clear_values()
 
 
 with view_tab:
@@ -277,8 +319,8 @@ with view_tab:
         if upload and uploaded_csv is not None:
             st.session_state.flashcards_df = get_flashcard_dataframe(uploaded_csv)
     with st.expander('Filter Data'):
-        min_value = 100
-        max_value = 0
+        min_value = 0
+        max_value = 100
 
         english_min_correct, english_max_correct = st.slider(
         'English Min and Max Correct Count to Display',
