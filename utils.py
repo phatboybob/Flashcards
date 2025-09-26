@@ -119,10 +119,25 @@ def view_flashcard_data_editor(flashcards_df,
 def view_flashcard_table(flashcards_df):
     """prints out the summary table after getting all words correct
     """
+
+    flashcards_df['Run Again'] = 'False'
     if not flashcards_df.empty:
-        st.table(
+        st.session_state.results_df = st.data_editor(
             flashcards_df,
+            use_container_width=False,
+            column_config={
+                "Run Again": st.column_config.CheckboxColumn(
+                    "Check Box to Run Again",
+                    help="Select all the words you want to run again",
+                    default=False,
+                ),
+            },
+            hide_index=True,
         )
+
+    # words_to_run_again = results_df[results_df['Run Again']]
+    # if not words_to_run_again.empty:
+    #     print(f"words to run again: {words_to_run_again}")
     else:
         st.write("please upload data")
 
@@ -304,13 +319,19 @@ def remove_word(direction):
         st.session_state.sample[
             st.session_state.sample[f'{direction} Word'] == st.session_state.word].index)
 
-def clear_values():
+def clear_values(exception_list=None):
     """clear the values so starting fresh doesn't
     have session states messing up if statements
     """
-    values = ['word_line', 'word', 'correct_answer', 'sample']
+    values = ['word_line', 'word', 'correct_answer', 'sample', 'show_form']
 
-    for val in values:
+    # create a filtered list that doesn't delete certain values
+    if exception_list:
+        filtered_list = [item for item in values if item not in exception_list]
+    else:
+        filtered_list = values
+
+    for val in filtered_list:
         if val in st.session_state:
             del st.session_state[val]
 
@@ -347,4 +368,3 @@ def switch_buttons():
     """
     st.session_state.yes_no_disabled = not st.session_state.yes_no_disabled
     st.session_state.submit_button_disabled = not st.session_state.yes_no_disabled
-
