@@ -160,7 +160,7 @@ with review_tab:
 
                             st.session_state.show_form = True
 
-                            clear_values('show_form')
+                            clear_values(['show_form'])
                     else:
                         st.markdown('# Incorrect. The correct '
                                     f' answer for :blue[{st.session_state.word}] is '
@@ -279,7 +279,7 @@ with review_tab:
                                     dataframe=st.session_state.flashcards_df)
                     st.session_state.show_form = True
 
-                    clear_values('show_form')
+                    clear_values(['show_form'])
                     del st.session_state.submit_button_disabled
                     del st.session_state.yes_no_disabled
 
