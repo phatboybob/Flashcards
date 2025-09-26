@@ -55,7 +55,7 @@ with review_tab:
                                                       options=('Lori', 'Jonathan', 'Sample'),
                                                       )
         number_to_ask = parameters_container.text_input(label='Number of words to ask',
-                                                        value=1,
+                                                        value=10,
                                                         help=('This is the number of words '
                                                               'that will be asked in this session'))
         correct_count = parameters_container.text_input(label='Only show if correct less than:',
@@ -179,7 +179,6 @@ with review_tab:
                                     st.session_state.sample_copy)
                 run_again_button = st.form_submit_button('Click here to Run Selected words Again')
                 if run_again_button:
-                    # st.write(f"Running these again {st.session_state.results_df}")
                     st.session_state.run_results_again = True
                     st.session_state.show_form = False
                     clear_values()
@@ -303,7 +302,6 @@ with review_tab:
                                     st.session_state.sample_copy)}')
                 run_again_button = st.form_submit_button('Click here to Run Selected words Again')
                 if run_again_button:
-                    # st.write(f"Running these again {st.session_state.results_df}")
                     clear_values()
 
 
