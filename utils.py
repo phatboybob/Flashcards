@@ -3,11 +3,13 @@ Utilities for the Streamlit German Flashcards app
 Created by Lori Jackson January 2025
 """
 
+from duckdb import df
 import pandas
 import streamlit as st
+from streamlit_gsheets import GSheetsConnection
 
-LORIS_FLASHCARDS_CSV = 'Flashcards_lori.csv'
-JONATHAN_FLASHCARDS_CSV = 'jonathan_data.csv'
+LORIS_FLASHCARDS_WORKSHEET = 'Lori_streamlit'
+JONATHANS_FLASHCARDS_WORKSHEET = 'Jonathan_streamlit'
 # LORIS_FLASHCARDS_CSV = 'sample.csv'
 DIRECTION_ENGLISH = 'English'
 DIRECTION_GERMAN = 'German'
@@ -34,7 +36,7 @@ COLUM_CONFIG = {f'{DIRECTION_ENGLISH} Word': st.column_config.TextColumn(require
                     default=0.0)
                }
 
-def get_flashcard_filepath_by_user(user='Lori'):
+def get_flashcard_worksheet_by_user(user='Lori'):
     """Read in the default csv. Unless it's not there.
 
     Returns:
@@ -42,9 +44,9 @@ def get_flashcard_filepath_by_user(user='Lori'):
     """
     match user:
         case 'Lori':
-            flashcard_path = LORIS_FLASHCARDS_CSV
+            flashcard_path = LORIS_FLASHCARDS_WORKSHEET
         case 'Jonathan':
-            flashcard_path = JONATHAN_FLASHCARDS_CSV
+            flashcard_path = JONATHAN_FLASHCARDS_WORKSHEET
         case 'Sample':
             flashcard_path = 'sample.csv'
         case _:
@@ -52,7 +54,7 @@ def get_flashcard_filepath_by_user(user='Lori'):
     return flashcard_path
 
 
-def get_flashcard_dataframe(flashcard_path=LORIS_FLASHCARDS_CSV):
+def get_flashcard_dataframe(user='Lori'):
     """Uploads a csv and returns it as a dataframe
 
     Args:
@@ -61,13 +63,15 @@ def get_flashcard_dataframe(flashcard_path=LORIS_FLASHCARDS_CSV):
     Returns:
         dataframe: dataframe conversion of the csv
     """
-    flashcards_df = pandas.read_csv(
-        flashcard_path,
-        names=COLUMNS_AND_TYPES.keys(),
-        dtype=COLUMNS_AND_TYPES,
-        header=None,
-        skiprows=1
-    ).fillna(0)
+
+    # Create a connection object.
+    gcp_connection = st.connection("gsheets",
+                                   type=GSheetsConnection)
+
+    flashcard_worksheet = get_flashcard_worksheet_by_user(user=user)
+    flashcards_df = gcp_connection.read(worksheet=flashcard_worksheet).dropna(subset=[f'{DIRECTION_ENGLISH} Word',
+                                                                                     f'{DIRECTION_GERMAN} Word']).fillna(0)
+
     return flashcards_df
 
 
@@ -107,11 +111,11 @@ def view_flashcard_data_editor(flashcards_df,
     ]
     if not filtered_english_count.empty:
         st.data_editor(
-                                                        data=filtered_english_count,
-                                                        use_container_width=False,
-                                                        num_rows='dynamic',
-                                                        column_config=COLUM_CONFIG,
-                                                        )
+            data=filtered_english_count,
+            width='content',
+            num_rows='dynamic',
+            column_config=COLUM_CONFIG,
+        )
     else:
         st.write("Please Upload Data")
 
@@ -124,7 +128,7 @@ def view_flashcard_table(flashcards_df):
     if not flashcards_df.empty:
         st.session_state.results_df = st.data_editor(
             flashcards_df,
-            use_container_width=False,
+            width='content',
             column_config={
                 "Run Again": st.column_config.CheckboxColumn(
                     "Check Box to Run Again",
@@ -295,17 +299,28 @@ def merge_dataframes(old_df, new_df):
     old_df.update(new_df)
 
 
-def write_df_to_csv(dataframe,
-                    filepath=LORIS_FLASHCARDS_CSV,
-                    ):
-    """writes a dataframe to csv
-
-    Args:
-        dataframe (dataframe): dataframe you want to write to csv
-        filename (output filename, optional): output filename csv to write dataframe to.
-        Defaults to LORIS_FLASHCARDS_CSV.
+def write_df_to_google_drive(dataframe,
+                             user='Lori'):
+    """writes a dataframe to Google Drive
     """
-    dataframe.to_csv(filepath, index=False, header=True)
+    sheet_name = get_flashcard_worksheet_by_user(user)
+    conn = st.connection("gsheets", type=GSheetsConnection)
+    conn.update(
+        worksheet=sheet_name,
+        data=dataframe
+    )
+
+# def write_df_to_csv(dataframe,
+#                     filepath=LORIS_FLASHCARDS_CSV,
+#                     ):
+#     """writes a dataframe to csv
+
+#     Args:
+#         dataframe (dataframe): dataframe you want to write to csv
+#         filename (output filename, optional): output filename csv to write dataframe to.
+#         Defaults to LORIS_FLASHCARDS_CSV.
+#     """
+#     dataframe.to_csv(filepath, index=False, header=True)
 
 
 def remove_word(direction):
