@@ -23,8 +23,7 @@ from utils import (
                     merge_dataframes,
                     disable_buttons,
                     switch_buttons,
-                    write_df_to_csv,
-                    get_flashcard_filepath_by_user,
+                    write_df_to_google_drive,
                   )
 
 DIRECTION_ENGLISH = 'English'
@@ -77,8 +76,7 @@ with review_tab:
 
     if show_selection:
         if st.session_state.current_user is not current_user:
-            file_path = get_flashcard_filepath_by_user(current_user)
-            st.session_state.flashcards_df = get_flashcard_dataframe(flashcard_path=file_path)
+            st.session_state.flashcards_df = get_flashcard_dataframe(user=current_user)
             st.session_state.current_user = current_user
         params = set_params(number_to_ask=number_to_ask,
                             correct_count=correct_count,
@@ -151,13 +149,7 @@ with review_tab:
                             merge_dataframes(old_df=st.session_state.flashcards_df,
                                              new_df=st.session_state.sample_copy)
 
-                            # get filepath by user
-                            filepath = get_flashcard_filepath_by_user(user=st.session_state.current_user)
-
-                            # write that shit out
-                            write_df_to_csv(filepath=filepath,
-                                            dataframe=st.session_state.flashcards_df)
-
+                            write_df_to_google_drive(dataframe=st.session_state.flashcards_df)
                             st.session_state.show_form = True
 
                             clear_values(['show_form'])
@@ -270,13 +262,9 @@ with review_tab:
                     # original data
                     merge_dataframes(old_df=st.session_state.flashcards_df,
                                      new_df=st.session_state.sample_copy)
+                    write_df_to_google_drive(dataframe=st.session_state.flashcards_df)
 
-                    # get filepath by user
-                    filepath = get_flashcard_filepath_by_user(user=st.session_state.current_user)
 
-                    #write that shit out
-                    write_df_to_csv(filepath=filepath,
-                                    dataframe=st.session_state.flashcards_df)
                     st.session_state.show_form = True
 
                     clear_values(['show_form'])
@@ -308,18 +296,13 @@ with review_tab:
 
 
 with view_tab:
-    with st.form(key='save to file'):
+    with st.form(key='Pull in Data from Google Sheets'):
         st.markdown(f'# Currently Viewing :red[{st.session_state.current_user}\'s] Data')
-        save_to_csv = st.form_submit_button(label='Save')
-        uploaded_csv = st.file_uploader(label='Choose your flashcards file '
-                                              'and the press the "Upload" button',
-                                        type='csv')
-        upload = st.form_submit_button(label='Upload')
-        if save_to_csv:
-            write_df_to_csv(dataframe=st.session_state.flashcards_df,
-                            )
-        if upload and uploaded_csv is not None:
-            st.session_state.flashcards_df = get_flashcard_dataframe(uploaded_csv)
+        clear_cache_and_sync = st.form_submit_button(label='Sync with Google Sheets')
+
+        if clear_cache_and_sync:
+            st.cache_data.clear()
+            st.session_state.flashcards_df = get_flashcard_dataframe(st.session_state.current_user)
     with st.expander('Filter Data'):
         min_value = 0
         max_value = 100
