@@ -9,7 +9,7 @@ import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 
 LORIS_FLASHCARDS_WORKSHEET = 'Lori_streamlit'
-JONATHAN_FLASHCARDS_CSV = 'Jonathan_streamlit'
+JONATHANS_FLASHCARDS_WORKSHEET = 'Jonathan_streamlit'
 # LORIS_FLASHCARDS_CSV = 'sample.csv'
 DIRECTION_ENGLISH = 'English'
 DIRECTION_GERMAN = 'German'
@@ -46,7 +46,7 @@ def get_flashcard_worksheet_by_user(user='Lori'):
         case 'Lori':
             flashcard_path = LORIS_FLASHCARDS_WORKSHEET
         case 'Jonathan':
-            flashcard_path = JONATHAN_FLASHCARDS_CSV
+            flashcard_path = JONATHAN_FLASHCARDS_WORKSHEET
         case 'Sample':
             flashcard_path = 'sample.csv'
         case _:
