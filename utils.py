@@ -46,7 +46,7 @@ def get_flashcard_worksheet_by_user(user='Lori'):
         case 'Lori':
             flashcard_path = LORIS_FLASHCARDS_WORKSHEET
         case 'Jonathan':
-            flashcard_path = JONATHAN_FLASHCARDS_WORKSHEET
+            flashcard_path = JONATHANS_FLASHCARDS_WORKSHEET
         case 'Sample':
             flashcard_path = 'sample.csv'
         case _:
