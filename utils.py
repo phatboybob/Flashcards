@@ -383,3 +383,8 @@ def switch_buttons():
     """
     st.session_state.yes_no_disabled = not st.session_state.yes_no_disabled
     st.session_state.submit_button_disabled = not st.session_state.yes_no_disabled
+
+def login_screen():
+    st.header("This app is private.")
+    st.subheader("Please log in.")
+    st.button("Log in with Google", on_click=st.login)
