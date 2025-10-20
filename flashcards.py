@@ -34,6 +34,10 @@ OTHER_DIRECTION = ''
 
 if not st.user.is_logged_in:
     login_screen()
+elif st.user.email not in st.secrets["authorized_users"]:
+    st.header(f"Access Denied {st.user.name}")
+    st.subheader(f"{st.user.email} does not have permission to view this app.")
+
 else:
     st.header(f"Welcome, {st.user.name}!")
 
@@ -364,3 +368,6 @@ else:
                                 german_min_percent=german_min_percent,
                                 german_max_percent=german_max_percent,
                                 )
+if st.user.is_logged_in:
+    if st.button("Log out"):
+        st.logout()
