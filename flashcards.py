@@ -61,7 +61,7 @@ else:
         with st.form('vocab_list_form'):
             parameters_container = st.container()
             current_user = parameters_container.selectbox(label='Current User',
-                                                        options=('Lori', 'Jonathan', 'Sample'),
+                                                        options=('Lori', 'Jonathan', 'Kerry','Sample'),
                                                         )
             number_to_ask = parameters_container.text_input(label='Number of words to ask',
                                                             value=10,
