@@ -160,7 +160,7 @@ else:
                                                 new_df=st.session_state.sample_copy)
 
                                 write_df_to_google_drive(dataframe=st.session_state.flashcards_df,
-                                                         user=st.session_state.current_use,
+                                                         user=st.session_state.current_user,
                                                         )
                                 st.session_state.show_form = True
 
@@ -275,7 +275,7 @@ else:
                         merge_dataframes(old_df=st.session_state.flashcards_df,
                                         new_df=st.session_state.sample_copy)
                         write_df_to_google_drive(dataframe=st.session_state.flashcards_df,
-                                                 user=st.session_state.current_use)
+                                                 user=st.session_state.current_user)
 
 
                         st.session_state.show_form = True
