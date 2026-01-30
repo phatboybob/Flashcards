@@ -159,7 +159,9 @@ else:
                                 merge_dataframes(old_df=st.session_state.flashcards_df,
                                                 new_df=st.session_state.sample_copy)
 
-                                write_df_to_google_drive(dataframe=st.session_state.flashcards_df)
+                                write_df_to_google_drive(dataframe=st.session_state.flashcards_df,
+                                                         user=st.session_state.current_use,
+                                                        )
                                 st.session_state.show_form = True
 
                                 clear_values(['show_form'])
@@ -272,7 +274,8 @@ else:
                         # original data
                         merge_dataframes(old_df=st.session_state.flashcards_df,
                                         new_df=st.session_state.sample_copy)
-                        write_df_to_google_drive(dataframe=st.session_state.flashcards_df)
+                        write_df_to_google_drive(dataframe=st.session_state.flashcards_df,
+                                                 user=st.session_state.current_use)
 
 
                         st.session_state.show_form = True
