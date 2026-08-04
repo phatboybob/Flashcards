@@ -84,3 +84,6 @@ number of times a word has been asked to assure all words
 are included in the sample. If that number were 5, for example,
 it would skip words that have been asked 20 times, but you've gotten
 wrong 19 times.
+
+## Below is an architecture diagram
+![Architecture Diagram](diagram.png)
